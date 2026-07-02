@@ -45,7 +45,7 @@
     <!-- ===== English ===== -->
     <section id="en">
     <h1>Privacy Policy</h1>
-    <p class="meta">vismo &nbsp;·&nbsp; Last updated: May 28, 2026</p>
+    <p class="meta">vismo &nbsp;·&nbsp; Last updated: July 3, 2026</p>
 
     <p>
         vismo ("the App") is developed and maintained by Hyunjin Cho ("I", "me", or "my").
@@ -54,14 +54,15 @@
 
     <h2>Information Collection</h2>
     <p>
-        vismo is a camera and photo filter app. The App handles the following information,
-        all stored locally on your device. No data is transmitted to any external server.
+        vismo is a camera and photo filter app. The App handles the following information.
+        Except for purchase/subscription verification (see "Third-Party Services" below),
+        everything stays on your device and is never transmitted to any external server.
     </p>
     <ul>
         <li><strong>Photos and videos you capture or import</strong> — stored in the App's gallery on your device, and (with your permission) saved to your Photos library.</li>
         <li><strong>Location data (only when permitted)</strong> — if you grant location permission, GPS coordinates are embedded in the EXIF metadata of photos you capture, the same way the built-in Camera app does. Location data is not sent to any server and is only written into your own photo files.</li>
         <li><strong>App settings and gallery index</strong> — your preferences (selected filter, save format, etc.) and an index of saved photos are stored on your device using standard iOS storage APIs.</li>
-        <li><strong>Purchase and trial status</strong> — for the 21-day free trial and subscription/lifetime purchase, the trial start date and purchase status are stored locally on your device (using iOS Keychain and UserDefaults). Apple's StoreKit handles the actual transaction directly with Apple; the App never receives or stores your payment information.</li>
+        <li><strong>Purchase and trial status</strong> — for the 21-day free trial and subscription/lifetime purchase, the trial start date and purchase status are stored locally on your device (using iOS Keychain and UserDefaults). Payment itself is handled by Apple; the App never receives or stores your payment card information. To verify and restore your purchase entitlement, the App uses RevenueCat — see "Third-Party Services" below.</li>
     </ul>
 
     <h2>Permissions</h2>
@@ -74,17 +75,42 @@
     <h2>Third-Party Services</h2>
     <p>
         The App does <strong>not</strong> use any third-party analytics, advertising, crash
-        reporting, or tracking services. The App does <strong>not</strong> make any network
-        requests to external servers. All filtering and processing happen on your device.
+        reporting, or tracking services. All image filtering and processing happen on your device.
+    </p>
+    <p>
+        The App uses <strong>one</strong> third-party service, solely for purchases:
+    </p>
+    <ul>
+        <li><strong>RevenueCat, Inc. (United States) — subscription management.</strong>
+            To verify and restore your free trial, subscription, or lifetime purchase, the App
+            communicates with RevenueCat servers (including when the App launches). What is sent:
+            a randomly generated anonymous app user ID and purchase/subscription transaction
+            information. What is <em>not</em> sent: your name, email address, payment card details,
+            photos, location, or any advertising identifier. This data is transferred to and
+            processed in the <strong>United States</strong> and retained according to
+            <a href="https://www.revenuecat.com/privacy">RevenueCat's Privacy Policy</a>.</li>
+    </ul>
+    <p>
+        Apart from the purchase verification described above, the App makes no network requests
+        to external servers. I do <strong>not</strong> sell your personal information, or share
+        it for cross-context behavioral advertising.
     </p>
 
     <h2>Data Storage and Deletion</h2>
     <p>
-        All data (photos, gallery index, settings, trial status) is stored locally on your
+        All other data (photos, gallery index, settings, trial status) is stored locally on your
         device. When you delete the App, iOS removes all locally stored data, except for
         Keychain items that preserve trial state across reinstalls on the same device.
         Photos you have saved to your Photos library remain in your Photos library and are
-        managed by iOS.
+        managed by iOS. Purchase records held by Apple and RevenueCat are managed under their
+        respective policies; you may request deletion of RevenueCat-held data via the contact
+        email below.
+    </p>
+
+    <h2>Security</h2>
+    <p>
+        Your photos, videos, and location never leave your device. Purchase verification
+        traffic is encrypted in transit (HTTPS).
     </p>
 
     <h2>Children's Privacy</h2>
@@ -110,7 +136,7 @@
     <!-- ===== 한국어 ===== -->
     <section id="ko">
     <h1>개인정보 처리방침</h1>
-    <p class="meta">vismo &nbsp;·&nbsp; 마지막 업데이트: 2026년 5월 28일</p>
+    <p class="meta">vismo &nbsp;·&nbsp; 마지막 업데이트: 2026년 7월 3일</p>
 
     <p>
         vismo(이하 "앱")는 Hyunjin Cho(이하 "개발자")가 개발·운영합니다.
@@ -119,14 +145,15 @@
 
     <h2>수집하는 정보</h2>
     <p>
-        vismo는 카메라 및 사진 필터 앱입니다. 다음 정보가 사용자 기기 내부에만 저장되며,
-        외부 서버로 전송되지 않습니다.
+        vismo는 카메라 및 사진 필터 앱입니다. 앱은 다음 정보를 처리하며,
+        구매·구독 확인(아래 "제3자 서비스" 참조)을 제외한 모든 정보는 사용자 기기
+        내부에만 저장되고 외부 서버로 전송되지 않습니다.
     </p>
     <ul>
         <li><strong>촬영하거나 불러온 사진 및 영상</strong> — 앱 내 갤러리에 저장되며, 사용자 허가가 있을 경우 사진 앱에도 함께 저장됩니다.</li>
         <li><strong>위치 정보 (허용 시에 한해)</strong> — 위치 권한을 허용하시면, iOS 기본 카메라 앱과 동일한 방식으로 촬영 사진의 EXIF 메타데이터에 GPS 좌표가 임베딩됩니다. 위치 정보는 외부 서버로 전송되지 않으며, 사용자 본인의 사진 파일 내부에만 기록됩니다.</li>
         <li><strong>앱 설정 및 갤러리 인덱스</strong> — 선택한 필터, 저장 포맷 등 환경 설정과 저장된 사진의 인덱스가 iOS 표준 저장 API를 통해 기기에 보관됩니다.</li>
-        <li><strong>결제 및 트라이얼 상태</strong> — 21일 무료 체험 및 구독(월/연) 또는 평생 구매를 위해 트라이얼 시작일과 구매 상태가 기기 내(iOS Keychain 및 UserDefaults)에 저장됩니다. 실제 결제는 Apple의 StoreKit이 Apple과 직접 처리하며, 앱은 결제 정보를 받지도, 저장하지도 않습니다.</li>
+        <li><strong>결제 및 트라이얼 상태</strong> — 21일 무료 체험 및 구독(월/연) 또는 평생 구매를 위해 트라이얼 시작일과 구매 상태가 기기 내(iOS Keychain 및 UserDefaults)에 저장됩니다. 실제 결제는 Apple이 직접 처리하며, 앱은 결제 카드 정보를 받지도, 저장하지도 않습니다. 구매 권한의 확인·복원에는 RevenueCat을 사용합니다 — 아래 "제3자 서비스" 참조.</li>
     </ul>
 
     <h2>권한</h2>
@@ -136,29 +163,68 @@
         <li><strong>사용 중 위치 정보</strong> (선택) — 기본 카메라 앱과 동일하게 사진 EXIF에 GPS를 임베딩합니다. 언제든지 거부하거나 회수할 수 있으며, 다른 기능에 영향을 주지 않습니다.</li>
     </ul>
 
-    <h2>제3자 서비스</h2>
+    <h2>제3자 서비스 및 처리위탁</h2>
     <p>
-        앱은 어떠한 제3자 분석, 광고, 크래시 리포팅, 추적 서비스도 사용하지 <strong>않습니다</strong>.
-        외부 서버로의 네트워크 요청도 <strong>없습니다</strong>. 모든 필터링과 처리는 사용자의 기기 내에서만 이루어집니다.
+        앱은 제3자 분석, 광고, 크래시 리포팅, 추적 서비스를 사용하지 <strong>않습니다</strong>.
+        모든 이미지 필터링과 처리는 사용자의 기기 내에서 이루어집니다.
+        다만 결제 기능에 한해 아래 한 곳에 처리를 위탁합니다.
     </p>
+    <ul>
+        <li><strong>RevenueCat, Inc. (미국) — 구독 관리.</strong>
+            무료 체험·구독·평생 구매 권한의 확인과 복원을 위해 앱은 RevenueCat 서버와
+            통신합니다(앱 실행 시 포함). 전송되는 정보: 무작위로 생성되는 익명 앱 사용자 ID,
+            구매·구독 거래 정보. 전송되지 <em>않는</em> 정보: 이름, 이메일, 결제 카드 정보,
+            사진, 위치, 광고식별자.</li>
+    </ul>
+    <p>
+        위 구매 확인 외에 앱이 외부 서버로 네트워크 요청을 하는 경우는 없으며,
+        개인정보를 판매하거나 맞춤형 광고 목적으로 공유하지 않습니다.
+    </p>
+
+    <h2>개인정보의 국외 이전</h2>
+    <p>구매 권한 확인·복원(처리위탁)을 위해 아래와 같이 개인정보가 국외로 이전됩니다.</p>
+    <ul>
+        <li><strong>이전받는 자</strong>: RevenueCat, Inc. (<a href="https://www.revenuecat.com/privacy">개인정보처리방침</a>)</li>
+        <li><strong>이전되는 국가</strong>: 미국</li>
+        <li><strong>이전 시기 및 방법</strong>: 앱 사용(실행·구매·복원) 시 / 암호화된 네트워크 전송</li>
+        <li><strong>이전되는 항목</strong>: 익명 앱 사용자 ID, 구매·구독 거래 정보</li>
+        <li><strong>이용 목적 및 보유·이용 기간</strong>: 구매 권한 확인·복원 / RevenueCat 개인정보처리방침에 따름</li>
+        <li><strong>이전 거부 방법</strong>: 아래 연락처로 거부 의사를 밝힐 수 있으나, 이 경우 유료 구매·구독 기능의 이용이 제한될 수 있습니다.</li>
+    </ul>
 
     <h2>데이터 저장 및 삭제</h2>
     <p>
-        모든 데이터(사진, 갤러리 인덱스, 환경 설정, 트라이얼 상태)는 사용자 기기에만 저장됩니다.
+        그 외 모든 데이터(사진, 갤러리 인덱스, 환경 설정, 트라이얼 상태)는 사용자 기기에만 저장됩니다.
         앱을 삭제하면 iOS가 로컬에 저장된 데이터를 함께 삭제합니다. 단, 동일 기기에서의 재설치 시
         트라이얼 상태 유지를 위해 Keychain에 저장된 항목은 예외적으로 보존됩니다.
         사진 앱에 별도로 저장한 사진은 사진 앱에 그대로 남으며 iOS가 관리합니다.
+        Apple·RevenueCat이 보유한 구매 기록은 각 사의 정책에 따라 관리되며,
+        RevenueCat 보유 정보의 삭제는 아래 연락처로 요청하실 수 있습니다.
+    </p>
+
+    <h2>안전성 확보 조치</h2>
+    <p>
+        사진·영상·위치 정보는 기기 밖으로 나가지 않으며, 구매 확인 통신은 전 구간
+        암호화(HTTPS)됩니다.
     </p>
 
     <h2>아동 개인정보 보호</h2>
     <p>
-        앱은 만 13세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다.
+        앱은 만 14세 미만 아동을 대상으로 하지 않으며, 만 14세 미만 아동의 개인정보를
+        의도적으로 수집하지 않습니다.
+    </p>
+
+    <h2>개인정보 보호책임자 및 권익침해 구제</h2>
+    <p>
+        개인정보 보호책임자: Hyunjin Cho · <a href="mailto:lifeismotive@gmail.com">lifeismotive@gmail.com</a><br>
+        개인정보 침해에 대한 신고·상담은 개인정보분쟁조정위원회(1833-6972),
+        개인정보침해신고센터(국번 없이 118)에 문의하실 수 있습니다.
     </p>
 
     <h2>처리방침 변경</h2>
     <p>
-        본 처리방침은 수시로 갱신될 수 있으며, 변경 내용은 본 페이지에 반영되고
-        "마지막 업데이트" 일자가 함께 갱신됩니다.
+        본 처리방침은 수시로 갱신될 수 있으며, 중요한 변경은 시행 7일 전에 본 페이지에
+        고지합니다. 변경 내용은 본 페이지에 반영되고 "마지막 업데이트" 일자가 함께 갱신됩니다.
     </p>
 
     <h2>연락처</h2>
@@ -173,7 +239,7 @@
     <!-- ===== 日本語 ===== -->
     <section id="ja">
     <h1>プライバシーポリシー</h1>
-    <p class="meta">vismo &nbsp;·&nbsp; 最終更新日: 2026年5月28日</p>
+    <p class="meta">vismo &nbsp;·&nbsp; 最終更新日: 2026年7月3日</p>
 
     <p>
         vismo（以下「本アプリ」）は Hyunjin Cho（以下「開発者」）が開発・運営しています。
@@ -182,14 +248,15 @@
 
     <h2>収集する情報</h2>
     <p>
-        vismoはカメラと写真フィルターアプリです。以下の情報はすべてユーザーの端末内のみに保存され、
-        外部サーバーへは送信されません。
+        vismoはカメラと写真フィルターアプリです。本アプリは以下の情報を取り扱います。
+        購入・サブスクリプションの確認（下記「第三者サービス」参照）を除き、すべての情報は
+        ユーザーの端末内のみに保存され、外部サーバーへは送信されません。
     </p>
     <ul>
         <li><strong>撮影またはインポートした写真および動画</strong> — 本アプリ内のギャラリーに保存され、ユーザーの許可がある場合は写真アプリにも保存されます。</li>
         <li><strong>位置情報（許可した場合のみ）</strong> — 位置情報の権限を許可すると、iOS標準カメラアプリと同じように、撮影した写真のEXIFメタデータにGPS座標が埋め込まれます。位置情報は外部サーバーに送信されず、ユーザー自身の写真ファイル内のみに記録されます。</li>
         <li><strong>アプリ設定およびギャラリーインデックス</strong> — 選択したフィルター、保存フォーマットなどの設定と、保存された写真のインデックスがiOS標準のストレージAPIを通じて端末に保管されます。</li>
-        <li><strong>購入およびトライアル状態</strong> — 21日間の無料体験およびサブスクリプション（月額／年額）または永久購入のため、トライアル開始日と購入状態が端末内（iOS Keychain および UserDefaults）に保存されます。実際の決済はAppleのStoreKitがAppleと直接処理し、本アプリは決済情報を受け取ることも保存することもありません。</li>
+        <li><strong>購入およびトライアル状態</strong> — 21日間の無料体験およびサブスクリプション（月額／年額）または永久購入のため、トライアル開始日と購入状態が端末内（iOS Keychain および UserDefaults）に保存されます。実際の決済はAppleが直接処理し、本アプリが決済カード情報を受け取ることも保存することもありません。有料機能の利用権限の確認・復元にはRevenueCatを使用します — 下記「第三者サービス」をご参照ください。</li>
     </ul>
 
     <h2>権限</h2>
@@ -202,17 +269,43 @@
     <h2>第三者サービス</h2>
     <p>
         本アプリは、第三者の分析、広告、クラッシュレポーティング、トラッキングサービスを一切
-        使用 <strong>しません</strong>。外部サーバーへのネットワークリクエストも <strong>ありません</strong>。
-        すべてのフィルタリングと処理はユーザーの端末内のみで行われます。
+        使用 <strong>しません</strong>。すべての画像フィルタリングと処理はユーザーの端末内で行われます。
+        ただし、購入機能に限り、以下の1社に個人データの取扱いを委託しています。
+    </p>
+    <ul>
+        <li><strong>RevenueCat, Inc.（米国） — サブスクリプション管理。</strong>
+            無料体験・サブスクリプション・永久購入に伴う利用権限の確認と復元のため、本アプリは
+            RevenueCatのサーバーと通信します（アプリ起動時を含む）。送信される情報:
+            ランダムに生成される匿名アプリユーザーID、購入・サブスクリプション取引情報。
+            送信され<em>ない</em>情報: 氏名、メールアドレス、決済カード情報、写真、位置情報、
+            広告識別子。</li>
+    </ul>
+    <p>
+        上記の購入確認以外に、本アプリが外部サーバーへネットワークリクエストを行うことはありません。
+        個人情報を販売したり、広告目的で第三者と共有したりすることはありません。
+    </p>
+
+    <h2>外国にある委託先への個人データの提供</h2>
+    <p>
+        有料機能の利用権限の確認・復元のため、米国に所在する RevenueCat, Inc. に上記の
+        個人データの取扱いを委託しています。米国の個人情報保護制度および RevenueCat が講じる保護措置については、
+        <a href="https://www.revenuecat.com/privacy">RevenueCatのプライバシーポリシー</a>を
+        ご確認ください。
     </p>
 
     <h2>データの保存と削除</h2>
     <p>
-        すべてのデータ（写真、ギャラリーインデックス、設定、トライアル状態）はユーザーの端末にのみ
-        保存されます。アプリを削除すると、iOSがローカルに保存されたデータを一緒に削除します。
+        その他のすべてのデータ（写真、ギャラリーインデックス、設定、トライアル状態）はユーザーの
+        端末にのみ保存されます。アプリを削除すると、iOSがローカルに保存されたデータを一緒に削除します。
         ただし、同じ端末での再インストール時にトライアル状態を維持するため、Keychainに保存された
         項目は例外的に保存されます。写真アプリに別途保存した写真は写真アプリにそのまま残り、
-        iOSが管理します。
+        iOSが管理します。Apple・RevenueCatが保有する購入記録は各社のポリシーに従って管理され、
+        RevenueCatが保有する情報の削除は下記の連絡先までご請求いただけます。
+    </p>
+
+    <h2>安全管理措置</h2>
+    <p>
+        写真・動画・位置情報は端末外へ送信されません。購入確認に係る通信はHTTPSにより暗号化されます。
     </p>
 
     <h2>児童のプライバシー</h2>
