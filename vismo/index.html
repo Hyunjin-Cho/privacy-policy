@@ -45,7 +45,7 @@
     <!-- ===== English ===== -->
     <section id="en">
     <h1>Privacy Policy</h1>
-    <p class="meta">vismo &nbsp;·&nbsp; Last updated: July 3, 2026</p>
+    <p class="meta">vismo &nbsp;·&nbsp; Last updated: July 20, 2026</p>
 
     <p>
         vismo ("the App") is developed and maintained by Hyunjin Cho ("I", "me", or "my").
@@ -59,7 +59,7 @@
         everything stays on your device and is never transmitted to any external server.
     </p>
     <ul>
-        <li><strong>Photos and videos you capture or import</strong> — stored in the App's gallery on your device, and (with your permission) saved to your Photos library.</li>
+        <li><strong>Photos you capture or import</strong> — stored in the App's gallery on your device, and (with your permission) saved to your Photos library.</li>
         <li><strong>Location data (only when permitted)</strong> — if you grant location permission, GPS coordinates are embedded in the EXIF metadata of photos you capture, the same way the built-in Camera app does. Location data is not sent to any server and is only written into your own photo files.</li>
         <li><strong>App settings and gallery index</strong> — your preferences (selected filter, save format, etc.) and an index of saved photos are stored on your device using standard iOS storage APIs.</li>
         <li><strong>Purchase and trial status</strong> — for the 21-day free trial and subscription/lifetime purchase, the trial start date and purchase status are stored locally on your device (using iOS Keychain and UserDefaults). Payment itself is handled by Apple; the App never receives or stores your payment card information. To verify and restore your purchase entitlement, the App uses RevenueCat — see "Third-Party Services" below.</li>
@@ -68,7 +68,7 @@
     <h2>Permissions</h2>
     <ul>
         <li><strong>Camera</strong> (required) — to capture photos and apply filters in real time.</li>
-        <li><strong>Photo Library Add</strong> (optional) — to save your filtered photos to your Photos app. The App requests <em>"Add only"</em> access, which does not allow reading existing photos.</li>
+        <li><strong>Photo Library</strong> (optional) — to save filtered photos and, when the App shows a deletion warning, check whether copies previously saved by the App still exist. The App requests read/write access for these purposes. Photos for import are chosen explicitly through the iOS system picker.</li>
         <li><strong>Location When In Use</strong> (optional) — to embed GPS coordinates in photo EXIF, like the built-in Camera app. You may decline or revoke this permission at any time without affecting other functionality.</li>
     </ul>
 
@@ -82,7 +82,7 @@
     </p>
     <ul>
         <li><strong>RevenueCat, Inc. (United States) — subscription management.</strong>
-            To verify and restore your free trial, subscription, or lifetime purchase, the App
+            To verify and restore your subscription or lifetime purchase, the App
             communicates with RevenueCat servers (including when the App launches). What is sent:
             a randomly generated anonymous app user ID and purchase/subscription transaction
             information. What is <em>not</em> sent: your name, email address, payment card details,
@@ -109,7 +109,7 @@
 
     <h2>Security</h2>
     <p>
-        Your photos, videos, and location never leave your device. Purchase verification
+        Your photos and location never leave your device. Purchase verification
         traffic is encrypted in transit (HTTPS).
     </p>
 
@@ -136,7 +136,7 @@
     <!-- ===== 한국어 ===== -->
     <section id="ko">
     <h1>개인정보 처리방침</h1>
-    <p class="meta">vismo &nbsp;·&nbsp; 마지막 업데이트: 2026년 7월 3일</p>
+    <p class="meta">vismo &nbsp;·&nbsp; 마지막 업데이트: 2026년 7월 20일</p>
 
     <p>
         vismo(이하 "앱")는 Hyunjin Cho(이하 "개발자")가 개발·운영합니다.
@@ -150,7 +150,7 @@
         내부에만 저장되고 외부 서버로 전송되지 않습니다.
     </p>
     <ul>
-        <li><strong>촬영하거나 불러온 사진 및 영상</strong> — 앱 내 갤러리에 저장되며, 사용자 허가가 있을 경우 사진 앱에도 함께 저장됩니다.</li>
+        <li><strong>촬영하거나 불러온 사진</strong> — 앱 내 갤러리에 저장되며, 사용자 허가가 있을 경우 사진 앱에도 함께 저장됩니다.</li>
         <li><strong>위치 정보 (허용 시에 한해)</strong> — 위치 권한을 허용하시면, iOS 기본 카메라 앱과 동일한 방식으로 촬영 사진의 EXIF 메타데이터에 GPS 좌표가 임베딩됩니다. 위치 정보는 외부 서버로 전송되지 않으며, 사용자 본인의 사진 파일 내부에만 기록됩니다.</li>
         <li><strong>앱 설정 및 갤러리 인덱스</strong> — 선택한 필터, 저장 포맷 등 환경 설정과 저장된 사진의 인덱스가 iOS 표준 저장 API를 통해 기기에 보관됩니다.</li>
         <li><strong>결제 및 트라이얼 상태</strong> — 21일 무료 체험 및 구독(월/연) 또는 평생 구매를 위해 트라이얼 시작일과 구매 상태가 기기 내(iOS Keychain 및 UserDefaults)에 저장됩니다. 실제 결제는 Apple이 직접 처리하며, 앱은 결제 카드 정보를 받지도, 저장하지도 않습니다. 구매 권한의 확인·복원에는 RevenueCat을 사용합니다 — 아래 "제3자 서비스" 참조.</li>
@@ -159,7 +159,7 @@
     <h2>권한</h2>
     <ul>
         <li><strong>카메라</strong> (필수) — 사진 촬영 및 실시간 필터 적용을 위해 사용됩니다.</li>
-        <li><strong>사진 라이브러리 추가</strong> (선택) — 필터가 적용된 사진을 사진 앱에 저장합니다. <em>"추가 전용"</em> 권한만 요청하며, 기존 사진을 읽을 수는 없습니다.</li>
+        <li><strong>사진 라이브러리</strong> (선택) — 필터가 적용된 사진을 저장하고, 앱 내 삭제 경고를 보여줄 때 앱이 이전에 저장한 사본이 사진 앱에 남아 있는지 확인합니다. 이를 위해 읽기·쓰기 권한을 요청합니다. 불러올 사진은 iOS 시스템 선택 화면에서 사용자가 직접 고릅니다.</li>
         <li><strong>사용 중 위치 정보</strong> (선택) — 기본 카메라 앱과 동일하게 사진 EXIF에 GPS를 임베딩합니다. 언제든지 거부하거나 회수할 수 있으며, 다른 기능에 영향을 주지 않습니다.</li>
     </ul>
 
@@ -171,7 +171,7 @@
     </p>
     <ul>
         <li><strong>RevenueCat, Inc. (미국) — 구독 관리.</strong>
-            무료 체험·구독·평생 구매 권한의 확인과 복원을 위해 앱은 RevenueCat 서버와
+            구독·평생 구매 권한의 확인과 복원을 위해 앱은 RevenueCat 서버와
             통신합니다(앱 실행 시 포함). 전송되는 정보: 무작위로 생성되는 익명 앱 사용자 ID,
             구매·구독 거래 정보. 전송되지 <em>않는</em> 정보: 이름, 이메일, 결제 카드 정보,
             사진, 위치, 광고식별자.</li>
@@ -204,7 +204,7 @@
 
     <h2>안전성 확보 조치</h2>
     <p>
-        사진·영상·위치 정보는 기기 밖으로 나가지 않으며, 구매 확인 통신은 전 구간
+        사진·위치 정보는 기기 밖으로 나가지 않으며, 구매 확인 통신은 전 구간
         암호화(HTTPS)됩니다.
     </p>
 
@@ -239,7 +239,7 @@
     <!-- ===== 日本語 ===== -->
     <section id="ja">
     <h1>プライバシーポリシー</h1>
-    <p class="meta">vismo &nbsp;·&nbsp; 最終更新日: 2026年7月3日</p>
+    <p class="meta">vismo &nbsp;·&nbsp; 最終更新日: 2026年7月20日</p>
 
     <p>
         vismo（以下「本アプリ」）は Hyunjin Cho（以下「開発者」）が開発・運営しています。
@@ -253,7 +253,7 @@
         ユーザーの端末内のみに保存され、外部サーバーへは送信されません。
     </p>
     <ul>
-        <li><strong>撮影またはインポートした写真および動画</strong> — 本アプリ内のギャラリーに保存され、ユーザーの許可がある場合は写真アプリにも保存されます。</li>
+        <li><strong>撮影またはインポートした写真</strong> — 本アプリ内のギャラリーに保存され、ユーザーの許可がある場合は写真アプリにも保存されます。</li>
         <li><strong>位置情報（許可した場合のみ）</strong> — 位置情報の権限を許可すると、iOS標準カメラアプリと同じように、撮影した写真のEXIFメタデータにGPS座標が埋め込まれます。位置情報は外部サーバーに送信されず、ユーザー自身の写真ファイル内のみに記録されます。</li>
         <li><strong>アプリ設定およびギャラリーインデックス</strong> — 選択したフィルター、保存フォーマットなどの設定と、保存された写真のインデックスがiOS標準のストレージAPIを通じて端末に保管されます。</li>
         <li><strong>購入およびトライアル状態</strong> — 21日間の無料体験およびサブスクリプション（月額／年額）または永久購入のため、トライアル開始日と購入状態が端末内（iOS Keychain および UserDefaults）に保存されます。実際の決済はAppleが直接処理し、本アプリが決済カード情報を受け取ることも保存することもありません。有料機能の利用権限の確認・復元にはRevenueCatを使用します — 下記「第三者サービス」をご参照ください。</li>
@@ -262,7 +262,7 @@
     <h2>権限</h2>
     <ul>
         <li><strong>カメラ</strong>（必須） — 写真撮影とリアルタイムフィルター適用のために使用します。</li>
-        <li><strong>写真ライブラリへの追加</strong>（任意） — フィルターを適用した写真を写真アプリに保存します。<em>「追加のみ」</em>の権限のみを要求し、既存の写真は読み取りません。</li>
+        <li><strong>写真ライブラリ</strong>（任意） — フィルターを適用した写真を保存し、本アプリ内で削除時の注意を表示する際に、本アプリが以前保存したコピーが写真アプリに残っているかを確認します。そのために読み書きのアクセス権を要求します。インポートする写真は、iOSのシステムピッカーでユーザーが明示的に選択します。</li>
         <li><strong>使用中の位置情報</strong>（任意） — 標準カメラアプリと同じように写真のEXIFにGPSを埋め込みます。いつでも拒否または取り消しが可能で、他の機能には影響しません。</li>
     </ul>
 
@@ -274,7 +274,7 @@
     </p>
     <ul>
         <li><strong>RevenueCat, Inc.（米国） — サブスクリプション管理。</strong>
-            無料体験・サブスクリプション・永久購入に伴う利用権限の確認と復元のため、本アプリは
+            サブスクリプション・永久購入に伴う利用権限の確認と復元のため、本アプリは
             RevenueCatのサーバーと通信します（アプリ起動時を含む）。送信される情報:
             ランダムに生成される匿名アプリユーザーID、購入・サブスクリプション取引情報。
             送信され<em>ない</em>情報: 氏名、メールアドレス、決済カード情報、写真、位置情報、
@@ -305,7 +305,7 @@
 
     <h2>安全管理措置</h2>
     <p>
-        写真・動画・位置情報は端末外へ送信されません。購入確認に係る通信はHTTPSにより暗号化されます。
+        写真・位置情報は端末外へ送信されません。購入確認に係る通信はHTTPSにより暗号化されます。
     </p>
 
     <h2>児童のプライバシー</h2>
