@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official support page for the vismo film camera app.">
+    <title>Support – vismo</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #181713;
+            --muted: #716f68;
+            --paper: #f7f4ed;
+            --card: #fffdf8;
+            --line: #ded9cd;
+            --accent: #846e38;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            color: var(--ink);
+            background: var(--paper);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.7;
+        }
+        main {
+            width: min(720px, calc(100% - 40px));
+            margin: 0 auto;
+            padding: 44px 0 72px;
+        }
+        .brand {
+            margin: 0 0 34px;
+            color: var(--muted);
+            font-size: 13px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+        .lang-switch {
+            margin: 0 0 22px;
+            font-size: 13px;
+        }
+        .lang-switch a { margin-right: 14px; }
+        h1 {
+            margin: 0 0 10px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(36px, 8vw, 54px);
+            font-weight: 500;
+            letter-spacing: -0.03em;
+            line-height: 1.05;
+        }
+        .lead {
+            max-width: 600px;
+            margin: 0 0 28px;
+            color: var(--muted);
+            font-size: 17px;
+        }
+        .contact-card {
+            margin: 0 0 36px;
+            padding: 22px 24px;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: var(--card);
+        }
+        .contact-card p { margin: 0 0 10px; }
+        .contact-card p:last-child { margin-bottom: 0; }
+        .button {
+            display: inline-block;
+            padding: 10px 16px;
+            border-radius: 999px;
+            color: #fff;
+            background: var(--ink);
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        h2 {
+            margin: 32px 0 8px;
+            font-size: 18px;
+            font-weight: 650;
+        }
+        p, li { font-size: 15px; }
+        ul, ol { padding-left: 22px; }
+        a { color: var(--accent); text-underline-offset: 3px; }
+        .note { color: var(--muted); font-size: 14px; }
+        .divider {
+            margin: 60px 0 40px;
+            border: 0;
+            border-top: 1px solid var(--line);
+        }
+        footer {
+            margin-top: 52px;
+            padding-top: 20px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 13px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color-scheme: dark;
+                --ink: #f4f0e6;
+                --muted: #aaa69d;
+                --paper: #171612;
+                --card: #201f1a;
+                --line: #3a3831;
+                --accent: #d0b56f;
+            }
+            .button { color: #171612; background: #f4f0e6; }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <p class="brand">vismo · film camera</p>
+    <nav class="lang-switch" aria-label="Language">
+        <a href="#en">English</a>
+        <a href="#ko">한국어</a>
+        <a href="#ja">日本語</a>
+    </nav>
+
+    <section id="en">
+        <h1>Support</h1>
+        <p class="lead">Help with vismo, including camera use, photo saving, purchases, and restoring access.</p>
+
+        <div class="contact-card">
+            <p><strong>Contact</strong></p>
+            <p>Email us with a short description of what happened. Please do not attach private photos unless they are necessary to explain the issue.</p>
+            <p><a class="button" href="mailto:lifeismotive@gmail.com?subject=vismo%20Support">Email vismo Support</a></p>
+        </div>
+
+        <h2>Purchase or restore access</h2>
+        <ol>
+            <li>Confirm that the device is signed in with the Apple Account used for the original purchase.</li>
+            <li>Check the network connection, then open vismo and choose <strong>Restore Purchases</strong> on the purchase screen.</li>
+            <li>If access is still missing, restart the app and try once more.</li>
+        </ol>
+        <p class="note">Apple processes all payments. vismo never receives your card information. Refund requests and subscription management are handled through <a href="https://reportaproblem.apple.com/">Apple’s purchase support</a>.</p>
+
+        <h2>Camera, Photos, or Location permission</h2>
+        <p>Open iPhone Settings, find vismo, and check the permission you want to change. Camera access is required to take photos. Photos and Location access are optional.</p>
+
+        <h2>When reporting a problem</h2>
+        <p>Please include the following so we can understand the issue without seeing your personal photos:</p>
+        <ul>
+            <li>iPhone model and iOS version</li>
+            <li>vismo app version</li>
+            <li>The steps immediately before the issue occurred</li>
+            <li>A screenshot of the message or screen, if available</li>
+        </ul>
+
+        <h2>Privacy</h2>
+        <p>Photo processing happens on your device. Purchase verification uses RevenueCat as described in the <a href="../">vismo Privacy Policy</a>.</p>
+    </section>
+
+    <hr class="divider">
+
+    <section id="ko" lang="ko">
+        <h1>고객지원</h1>
+        <p class="lead">vismo의 카메라 사용, 사진 저장, 결제 및 구매 복원을 도와드려요.</p>
+
+        <div class="contact-card">
+            <p><strong>문의하기</strong></p>
+            <p>어떤 일이 있었는지 간단히 적어 이메일로 보내주세요. 문제 설명에 꼭 필요한 경우가 아니라면 개인적인 사진은 첨부하지 않는 것을 권장합니다.</p>
+            <p><a class="button" href="mailto:lifeismotive@gmail.com?subject=vismo%20Support">vismo 고객지원에 이메일 보내기</a></p>
+        </div>
+
+        <h2>결제 또는 구매 복원이 필요할 때</h2>
+        <ol>
+            <li>아이폰에 처음 결제할 때 사용한 Apple 계정으로 로그인되어 있는지 확인해 주세요.</li>
+            <li>네트워크 연결을 확인한 뒤 vismo의 결제 화면에서 <strong>구매 복원</strong>을 눌러주세요.</li>
+            <li>이용 권한이 돌아오지 않으면 앱을 완전히 종료한 뒤 한 번 더 시도해 주세요.</li>
+        </ol>
+        <p class="note">모든 결제는 Apple이 직접 처리하며 vismo는 카드 정보를 받지 않습니다. 환불 요청과 구독 관리는 <a href="https://reportaproblem.apple.com/">Apple 구매 지원</a>에서 진행할 수 있습니다.</p>
+
+        <h2>카메라·사진·위치 권한</h2>
+        <p>아이폰 설정에서 vismo를 찾아 변경하려는 권한을 확인해 주세요. 사진 촬영에는 카메라 권한이 필요하며, 사진 및 위치 권한은 선택 사항입니다.</p>
+
+        <h2>문제를 제보할 때</h2>
+        <p>개인 사진을 보내지 않고도 문제를 이해할 수 있도록 아래 정보를 함께 알려주세요.</p>
+        <ul>
+            <li>아이폰 모델과 iOS 버전</li>
+            <li>vismo 앱 버전</li>
+            <li>문제가 발생하기 직전에 한 동작</li>
+            <li>가능한 경우 오류 문구나 화면의 스크린샷</li>
+        </ul>
+
+        <h2>개인정보</h2>
+        <p>사진 처리는 기기 안에서 이루어집니다. 구매 확인에 사용되는 RevenueCat 관련 내용은 <a href="../">vismo 개인정보 처리방침</a>에서 확인할 수 있습니다.</p>
+    </section>
+
+    <hr class="divider">
+
+    <section id="ja" lang="ja">
+        <h1>サポート</h1>
+        <p class="lead">vismoのカメラ操作、写真の保存、購入、および購入の復元をサポートします。</p>
+
+        <div class="contact-card">
+            <p><strong>お問い合わせ</strong></p>
+            <p>発生した問題を簡単に記載して、メールでお問い合わせください。問題の説明に必要な場合を除き、個人的な写真は添付しないことをおすすめします。</p>
+            <p><a class="button" href="mailto:lifeismotive@gmail.com?subject=vismo%20Support">vismoサポートにメールする</a></p>
+        </div>
+
+        <h2>購入または復元について</h2>
+        <ol>
+            <li>最初の購入時に使用したApple AccountでiPhoneにサインインしていることを確認してください。</li>
+            <li>ネットワーク接続を確認し、vismoの購入画面で<strong>購入を復元</strong>を選択してください。</li>
+            <li>利用権限が戻らない場合は、アプリを終了してからもう一度お試しください。</li>
+        </ol>
+        <p class="note">すべての決済はAppleが直接処理し、vismoがカード情報を受け取ることはありません。返金申請とサブスクリプション管理は<a href="https://reportaproblem.apple.com/">Appleの購入サポート</a>から行えます。</p>
+
+        <h2>カメラ・写真・位置情報の権限</h2>
+        <p>iPhoneの設定でvismoを開き、変更したい権限を確認してください。撮影にはカメラの権限が必要です。写真と位置情報の権限は任意です。</p>
+
+        <h2>問題を報告する際に必要な情報</h2>
+        <p>個人的な写真を送らなくても問題を確認できるよう、以下の情報をお知らせください。</p>
+        <ul>
+            <li>iPhoneのモデルとiOSのバージョン</li>
+            <li>vismoのアプリバージョン</li>
+            <li>問題が発生する直前に行った操作</li>
+            <li>可能であれば、メッセージまたは画面のスクリーンショット</li>
+        </ul>
+
+        <h2>プライバシー</h2>
+        <p>写真の処理はデバイス上で行われます。購入確認に使用するRevenueCatについては、<a href="../">vismoプライバシーポリシー</a>をご確認ください。</p>
+    </section>
+
+    <footer>
+        vismo · Developed by Hyunjin Cho · <a href="../">Privacy Policy</a>
+    </footer>
+</main>
+</body>
+</html>
