@@ -39,7 +39,8 @@
     <p class="lang-switch">
         <a href="#en">English</a> ·
         <a href="#ko">한국어</a> ·
-        <a href="#ja">日本語</a>
+        <a href="#ja">日本語</a> ·
+        <a href="#zh">简体中文</a>
     </p>
 
     <!-- ===== English ===== -->
@@ -80,9 +81,9 @@
             so that they never reach any other application.
         </li>
         <li>
-            The App examines each event only to determine whether it is the emergency exit shortcut
-            (Command + Option + Escape), which is deliberately allowed through. The event is
-            discarded immediately after this check.
+            The App examines each event only to determine whether it is the quit shortcut
+            (Command + Shift + 1). If it is, the App quits itself — that keystroke is not passed on
+            to any other application either. Every event is discarded immediately after this check.
         </li>
         <li>
             <strong>Nothing is recorded.</strong> Keystrokes are never written to disk, kept in
@@ -98,8 +99,9 @@
     <p>
         The App is not a background service. It does nothing until you launch it and confirm that
         you want to start. Keyboard blocking ends — and the permissions stop being used — as soon
-        as the App quits, which happens when you click the finish button ("다 닦았어요"), when the
-        countdown ends, or when the safety timer expires. Quitting the App fully releases the keyboard.
+        as the App quits, which happens when you click the finish button, when the countdown ends,
+        when you press Command + Shift + 1, or when the safety timer expires. Quitting the App fully
+        releases the keyboard.
     </p>
 
     <h2>Third-Party Services</h2>
@@ -171,8 +173,9 @@
             따라서 다른 어떤 프로그램에도 전달되지 않습니다.
         </li>
         <li>
-            앱은 각 이벤트가 긴급 종료 단축키(Command + Option + Esc)인지 판별하기 위해서만
-            확인하며, 이 단축키는 의도적으로 통과시킵니다. 확인이 끝난 이벤트는 즉시 폐기됩니다.
+            앱은 각 이벤트가 종료 단축키(Command + Shift + 1)인지 판별하기 위해서만 확인하며,
+            해당 조합이면 앱이 스스로 종료합니다 — 그 입력 역시 다른 프로그램으로 전달되지 않습니다.
+            확인이 끝난 이벤트는 즉시 폐기됩니다.
         </li>
         <li>
             <strong>기록은 일절 남기지 않습니다.</strong> 키 입력은 저장 장치에 기록되지 않고,
@@ -188,8 +191,9 @@
     <p>
         앱은 백그라운드에 상주하는 프로그램이 아닙니다. 사용자가 직접 실행하고 시작을 확인하기
         전까지는 아무 일도 하지 않습니다. 키보드 차단은 앱이 종료되는 순간 함께 끝나며, 그와 동시에
-        권한 사용도 중단됩니다. 종료는 "다 닦았어요" 버튼을 누를 때, 카운트다운이 끝날 때, 또는
-        안전 타이머가 만료될 때 이루어집니다. 앱이 종료되면 키보드는 완전히 원래대로 돌아옵니다.
+        권한 사용도 중단됩니다. 종료는 "다 닦았어요" 버튼을 누를 때, 카운트다운이 끝날 때,
+        Command + Shift + 1을 누를 때, 또는 안전 타이머가 만료될 때 이루어집니다.
+        앱이 종료되면 키보드는 완전히 원래대로 돌아옵니다.
     </p>
 
     <h2>제3자 서비스</h2>
@@ -263,9 +267,9 @@
             そのため、他のいかなるアプリケーションにも届きません。
         </li>
         <li>
-            本アプリは、各イベントが緊急終了のショートカット（Command + Option + Esc）かどうかを
-            判別するためだけに確認します。このショートカットは意図的に通過させます。確認を終えた
-            イベントは直ちに破棄されます。
+            本アプリは、各イベントが終了ショートカット（Command + Shift + 1）かどうかを判別する
+            ためだけに確認します。この組み合わせであれば本アプリが自ら終了します — その入力も
+            他のアプリケーションへは渡されません。確認を終えたイベントは直ちに破棄されます。
         </li>
         <li>
             <strong>記録は一切残しません。</strong> キー入力がディスクに書き込まれることはなく、
@@ -282,9 +286,9 @@
     <p>
         本アプリはバックグラウンドに常駐するソフトウェアではありません。ユーザーが自ら起動し、
         開始を確認するまでは何も行いません。キーボードのブロックはアプリの終了と同時に終わり、
-        権限の使用も停止します。終了は完了ボタン（「다 닦았어요」）を押したとき、カウントダウンが
-        終わったとき、または安全タイマーが切れたときに行われます。アプリが終了すれば、キーボードは
-        完全に元の状態に戻ります。
+        権限の使用も停止します。終了は「完了」ボタンを押したとき、カウントダウンが終わったとき、
+        Command + Shift + 1 を押したとき、または安全タイマーが切れたときに行われます。
+        アプリが終了すれば、キーボードは完全に元の状態に戻ります。
     </p>
 
     <h2>第三者サービス</h2>
@@ -314,6 +318,94 @@
     <h2>お問い合わせ</h2>
     <p>
         本プライバシーポリシーに関するお問い合わせは下記までお願いいたします。<br>
+        <a href="mailto:lifeismotive@gmail.com">lifeismotive@gmail.com</a>
+    </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ===== 简体中文 ===== -->
+    <section id="zh">
+    <h1>隐私政策</h1>
+    <p class="meta">ddak-a（닦아） &nbsp;·&nbsp; 最后更新: 2026年8月12日</p>
+
+    <p>
+        ddak-a（以下简称“本应用”）由 Hyunjin Cho（以下简称“开发者”）开发和维护。
+        本应用是一款 macOS 实用工具，在您擦拭键盘时临时阻止键盘输入，以免误按按键。
+        本隐私政策说明本应用收集哪些信息以及如何使用这些信息。
+    </p>
+
+    <h2>收集的信息</h2>
+    <p>
+        本应用 <strong>不会</strong> 收集、存储或传输任何个人信息。
+        没有账户，没有登录，也没有服务器。
+    </p>
+    <ul>
+        <li>不收集姓名、电子邮件地址或联系方式。</li>
+        <li>不访问或存储位置信息。</li>
+        <li>不收集设备标识符、使用分析或崩溃报告。</li>
+        <li>本应用 <strong>不进行任何网络通信</strong>，完全离线运行。</li>
+        <li>本应用不会在您的 Mac 上创建任何文件、日志或设置。</li>
+    </ul>
+
+    <h2>为什么需要键盘权限</h2>
+    <p>
+        为了阻止按键输入，macOS 要求在“系统设置 › 隐私与安全性”中为本应用授予两项权限：
+        <strong>辅助功能</strong> 和 <strong>输入监控</strong>。这与键盘记录软件所要求的权限相同，
+        因此有必要准确说明本应用如何使用这些权限：
+    </p>
+    <ul>
+        <li>
+            本应用运行期间会拦截键盘事件并 <strong>直接丢弃</strong>，
+            因此这些事件不会到达任何其他应用程序。
+        </li>
+        <li>
+            本应用仅为判断该事件是否为退出快捷键（Command + Shift + 1）而进行检查。
+            若是该组合，本应用会自行退出 — 该按键同样不会传递给其他应用程序。
+            检查完成后，事件会立即被丢弃。
+        </li>
+        <li>
+            <strong>不留下任何记录。</strong> 按键内容不会写入磁盘，不会在被丢弃的瞬间之后
+            留在内存中，不会显示在屏幕上，也不会传输到任何地方。
+        </li>
+        <li>
+            <strong>不会拦截</strong> 鼠标和触控板输入 — 本应用甚至不会接收这些事件。
+        </li>
+    </ul>
+
+    <h2>仅在您启动时运行</h2>
+    <p>
+        本应用不是后台常驻程序。在您亲自启动并确认开始之前，它不会执行任何操作。
+        键盘阻止会在应用退出时一并结束，权限的使用也随之停止。退出发生在您点击“完成”按钮时、
+        倒计时结束时、按下 Command + Shift + 1 时，或安全计时器到期时。
+        应用退出后，键盘将完全恢复正常。
+    </p>
+
+    <h2>第三方服务</h2>
+    <p>
+        本应用 <strong>不使用</strong> 任何第三方分析、广告、崩溃报告或跟踪服务，
+        也不包含任何第三方 SDK。
+    </p>
+
+    <h2>数据存储与删除</h2>
+    <p>
+        由于本应用不存储任何数据，因此没有需要删除的内容。从 Mac 中删除本应用即可将其完全移除。
+        您也可以随时在“系统设置 › 隐私与安全性 › 辅助功能／输入监控”中撤销其权限。
+    </p>
+
+    <h2>儿童隐私</h2>
+    <p>
+        本应用不会在知情的情况下收集 13 岁以下儿童的任何信息。
+    </p>
+
+    <h2>政策变更</h2>
+    <p>
+        本隐私政策可能会不时更新。任何变更都将反映在本页面上，并同时更新“最后更新”日期。
+    </p>
+
+    <h2>联系方式</h2>
+    <p>
+        如对本隐私政策有任何疑问，请联系：<br>
         <a href="mailto:lifeismotive@gmail.com">lifeismotive@gmail.com</a>
     </p>
     </section>
