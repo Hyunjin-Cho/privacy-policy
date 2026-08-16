@@ -45,7 +45,7 @@
     <!-- ===== English ===== -->
     <section id="en">
     <h1>Privacy Policy</h1>
-    <p class="meta">vismo &nbsp;·&nbsp; Last updated: July 20, 2026</p>
+    <p class="meta">vismo &nbsp;·&nbsp; Last updated: August 16, 2026</p>
 
     <p>
         vismo ("the App") is developed and maintained by Hyunjin Cho ("I", "me", or "my").
@@ -55,12 +55,17 @@
     <h2>Information Collection</h2>
     <p>
         vismo is a camera and photo filter app. The App handles the following information.
-        Except for purchase/subscription verification (see "Third-Party Services" below),
-        everything stays on your device and is never transmitted to any external server.
+        The App — or iOS acting on its behalf — sends information to an outside service in
+        two cases: purchase and subscription management (Apple processes the payment;
+        RevenueCat verifies and restores your entitlement and aggregates purchase statistics),
+        and the city-name lookup described under "Location data in photos". Separately, photos
+        you save to your Photos library pass out of the App's own storage and are managed by
+        iOS; whether they then leave the device depends on your iCloud Photos setting, and
+        photos you share go wherever you choose to send them.
     </p>
     <ul>
         <li><strong>Photos you capture or import</strong> — stored in the App's gallery on your device, and (with your permission) saved to your Photos library.</li>
-        <li><strong>Location data (only when permitted)</strong> — if you grant location permission, GPS coordinates are embedded in the EXIF metadata of photos you capture, the same way the built-in Camera app does. Location data is not sent to any server and is only written into your own photo files.</li>
+        <li><strong>Location data in photos</strong> — if you grant location permission and turn on "Save location" in the App's camera settings, the GPS coordinates available at the time of capture are embedded in the EXIF metadata of the photos you take, the same way the built-in Camera app does. I do not operate any server, so location data is never sent to me. One exception applies, and it is not limited to photos you take with vismo: whenever you open a photo in the App's gallery detail view and that photo carries GPS coordinates in its EXIF — whether it was captured with vismo or imported from your library with its original metadata intact — those coordinates are sent to <strong>Apple's geocoding service</strong> so a city name can be shown. This lookup is performed by iOS itself (the Core Location framework), and Apple's handling of the request is governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. vismo does not store the result anywhere off your device — I do not operate a server.</li>
         <li><strong>App settings and gallery index</strong> — your preferences (selected filter, save format, etc.) and an index of saved photos are stored on your device using standard iOS storage APIs.</li>
         <li><strong>Purchase and trial status</strong> — for the 21-day free trial and subscription/lifetime purchase, the trial start date and purchase status are stored locally on your device (using iOS Keychain and UserDefaults). Payment itself is handled by Apple; the App never receives or stores your payment card information. To verify and restore your purchase entitlement, the App uses RevenueCat — see "Third-Party Services" below.</li>
     </ul>
@@ -68,39 +73,67 @@
     <h2>Permissions</h2>
     <ul>
         <li><strong>Camera</strong> (required) — to capture photos and apply filters in real time.</li>
-        <li><strong>Photo Library</strong> (optional) — to save filtered photos and, when the App shows a deletion warning, check whether copies previously saved by the App still exist. The App requests read/write access for these purposes. Photos for import are chosen explicitly through the iOS system picker.</li>
-        <li><strong>Location When In Use</strong> (optional) — to embed GPS coordinates in photo EXIF, like the built-in Camera app. You may decline or revoke this permission at any time without affecting other functionality.</li>
+        <li><strong>Photo Library</strong> (optional) — to save filtered photos and, when the App shows a deletion warning, check whether copies previously saved by the App still exist. The App requests read/write access for these purposes; the read side is used only to check whether photos the App itself saved are still there. Photos for import are chosen explicitly through the iOS system picker.</li>
+        <li><strong>Location When In Use</strong> (optional) — used only if you also turn on "Save location" in the App's camera settings, in which case the coordinates available at the moment of capture are written into the photo's EXIF, like the built-in Camera app. The city name shown in the gallery detail view is obtained by sending the GPS coordinates already stored in a photo's EXIF to Apple, so it can appear even if you never grant this permission (see "Location data in photos" above). You may decline or revoke this permission at any time without affecting other functionality.</li>
     </ul>
 
     <h2>Third-Party Services</h2>
     <p>
-        The App does <strong>not</strong> use any third-party analytics, advertising, crash
-        reporting, or tracking services. All image filtering and processing happen on your device.
+        The App does <strong>not</strong> use any advertising, crash reporting, or tracking
+        services, and it embeds no behavioural analytics SDK. All image filtering and processing
+        happen on your device. I can see aggregate purchase statistics through the RevenueCat
+        dashboard described below and through Apple's App Store Connect.
     </p>
     <p>
-        The App uses <strong>one</strong> third-party service, solely for purchases:
+        For purchases, Apple processes the payment itself, and <strong>one</strong> third-party
+        company — RevenueCat — verifies and restores your entitlement on my behalf.
+        Separately, iOS sends photo coordinates to Apple when a city name is displayed.
+        Both are described below.
     </p>
     <ul>
-        <li><strong>RevenueCat, Inc. (United States) — subscription management.</strong>
+        <li><strong>RevenueCat, Inc. (United States) — purchase and subscription management,
+            and purchase statistics.</strong>
             To verify and restore your subscription or lifetime purchase, the App
-            communicates with RevenueCat servers (including when the App launches). What is sent:
-            a randomly generated anonymous app user ID and purchase/subscription transaction
-            information. What is <em>not</em> sent: your name, email address, payment card details,
-            photos, location, or any advertising identifier. This data is transferred to and
-            processed in the <strong>United States</strong> and retained according to
+            communicates with RevenueCat servers (including when the App launches).
+            What is sent, or obtained by RevenueCat as part of that communication:
+            an app user ID that RevenueCat generates at random (the App never links it to a
+            name or email address), purchase and subscription transaction information,
+            basic device and app information (device model, OS and app version, app bundle ID,
+            language settings, store country, and the vendor identifier IDFV), and your IP address.
+            What the App does <em>not</em> send to RevenueCat in this communication: your name,
+            email address, payment card details, your photos, the GPS coordinates in your photos,
+            or the advertising identifier (IDFA).
+            This data is transferred to and processed in the <strong>United States</strong> and
+            retained according to
             <a href="https://www.revenuecat.com/privacy">RevenueCat's Privacy Policy</a>.</li>
+        <li><strong>Apple Inc. (United States) — city-name lookup.</strong>
+            When you open a photo that carries GPS coordinates in the App's gallery detail view,
+            iOS sends those coordinates to Apple so that a city name can be displayed.
+            What the App passes on for this: the GPS coordinates stored in that photo, together
+            with a fixed English locale (en_US) that fixes the language of the returned city name.
+            The App does not pass your photo, any identifier of yours, or any purchase information
+            for this purpose. The request itself is made by the iOS Core Location framework, so
+            anything Apple additionally receives as part of that network request (your IP address,
+            for example) is handled under
+            <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.
+            There is no separate switch that disables only this lookup: to avoid it, do not open
+            the gallery detail view of photos that contain GPS coordinates. Turning off
+            "Save location" stops new photos taken with vismo from recording coordinates, but it
+            does not change photos that already contain them, including imported ones.</li>
     </ul>
     <p>
-        Apart from the purchase verification described above, the App makes no network requests
-        to external servers. I do <strong>not</strong> sell your personal information, or share
-        it for cross-context behavioral advertising.
+        Apart from photos you save or share yourself, the only data the App sends to an outside
+        service is the purchase-related communication described above and the coordinates sent to
+        Apple to display a city name. I do <strong>not</strong> sell your personal information,
+        or share it for cross-context behavioral advertising.
     </p>
 
     <h2>Data Storage and Deletion</h2>
     <p>
         All other data (photos, gallery index, settings, trial status) is stored locally on your
-        device. When you delete the App, iOS removes all locally stored data, except for
-        Keychain items that preserve trial state across reinstalls on the same device.
+        device. When you delete the App, iOS removes all locally stored data; Keychain items
+        that preserve trial state (such as the trial start date) may remain on the device so
+        that reinstalling on the same device does not restart the trial.
         Photos you have saved to your Photos library remain in your Photos library and are
         managed by iOS. Purchase records held by Apple and RevenueCat are managed under their
         respective policies; you may request deletion of RevenueCat-held data via the contact
@@ -109,8 +142,13 @@
 
     <h2>Security</h2>
     <p>
-        Your photos and location never leave your device. Purchase verification
-        traffic is encrypted in transit (HTTPS).
+        Photos stay in the App's own storage unless you save them to your Photos library or
+        share them; once saved, iOS manages them, and whether they leave the device depends on
+        your iCloud Photos setting. Location data leaves your device when you open the gallery
+        detail view of a photo containing GPS coordinates and a city name has to be fetched, as
+        described above. If you share a photo whose EXIF contains GPS coordinates, those
+        coordinates travel with the photo to wherever you send it.
+        Communication with RevenueCat is encrypted in transit (HTTPS).
     </p>
 
     <h2>Children's Privacy</h2>
@@ -137,7 +175,7 @@
     <!-- ===== 한국어 ===== -->
     <section id="ko">
     <h1>개인정보 처리방침</h1>
-    <p class="meta">vismo &nbsp;·&nbsp; 마지막 업데이트: 2026년 7월 20일</p>
+    <p class="meta">vismo &nbsp;·&nbsp; 마지막 업데이트: 2026년 8월 16일</p>
 
     <p>
         vismo(이하 "앱")는 Hyunjin Cho(이하 "개발자")가 개발·운영합니다.
@@ -146,13 +184,16 @@
 
     <h2>수집하는 정보</h2>
     <p>
-        vismo는 카메라 및 사진 필터 앱입니다. 앱은 다음 정보를 처리하며,
-        구매·구독 확인(아래 "제3자 서비스" 참조)을 제외한 모든 정보는 사용자 기기
-        내부에만 저장되고 외부 서버로 전송되지 않습니다.
+        vismo는 카메라 및 사진 필터 앱입니다. 앱(또는 앱을 대신해 동작하는 iOS)이 외부 서비스로
+        정보를 보내는 경우는 두 가지입니다 — 구매·구독 관리(결제는 Apple이 처리하고, RevenueCat이
+        구매 권한의 확인·복원과 구매 통계 집계를 담당합니다), 그리고 "사진의 위치 정보" 항목에
+        설명된 도시 이름 조회입니다. 이와 별개로, 사용자가 사진 앱에 저장한 사진은 앱의 저장 영역을
+        벗어나 iOS가 관리하게 되며, 그 사진이 기기 밖으로 나가는지는 사용자의 iCloud 사진 설정에
+        따릅니다. 공유한 사진은 사용자가 선택한 곳으로 전달됩니다.
     </p>
     <ul>
         <li><strong>촬영하거나 불러온 사진</strong> — 앱 내 갤러리에 저장되며, 사용자 허가가 있을 경우 사진 앱에도 함께 저장됩니다.</li>
-        <li><strong>위치 정보 (허용 시에 한해)</strong> — 위치 권한을 허용하시면, iOS 기본 카메라 앱과 동일한 방식으로 촬영 사진의 EXIF 메타데이터에 GPS 좌표가 임베딩됩니다. 위치 정보는 외부 서버로 전송되지 않으며, 사용자 본인의 사진 파일 내부에만 기록됩니다.</li>
+        <li><strong>사진의 위치 정보</strong> — 위치 권한을 허용하고 앱의 카메라 설정에서 "위치 저장"을 켜두시면, iOS 기본 카메라 앱과 동일한 방식으로 촬영 시점에 확인된 GPS 좌표가 사진의 EXIF 메타데이터에 임베딩됩니다. 개발자는 별도의 서버를 운영하지 않으므로 위치 정보가 개발자에게 전송되는 일은 없습니다. 다만 한 가지 예외가 있으며, 이는 vismo로 직접 촬영한 사진에만 해당하는 것이 아닙니다 — 앱 갤러리의 사진 상세 화면을 열었을 때 그 사진의 EXIF에 GPS 좌표가 들어 있으면(vismo로 촬영한 사진이든, 원본 메타데이터가 유지된 채 불러온 사진이든), 도시 이름을 표시하기 위해 해당 좌표가 <strong>Apple 지오코딩 서비스</strong>로 전송됩니다. 이 조회는 iOS(Core Location 프레임워크)가 직접 수행하며, Apple의 데이터 취급에는 <a href="https://www.apple.com/legal/privacy/">Apple 개인정보처리방침</a>이 적용됩니다. vismo는 조회 결과를 기기 밖 어디에도 저장하지 않습니다 — 개발자는 서버를 운영하지 않습니다.</li>
         <li><strong>앱 설정 및 갤러리 인덱스</strong> — 선택한 필터, 저장 포맷 등 환경 설정과 저장된 사진의 인덱스가 iOS 표준 저장 API를 통해 기기에 보관됩니다.</li>
         <li><strong>결제 및 트라이얼 상태</strong> — 21일 무료 체험 및 구독(월/연) 또는 평생 구매를 위해 트라이얼 시작일과 구매 상태가 기기 내(iOS Keychain 및 UserDefaults)에 저장됩니다. 실제 결제는 Apple이 직접 처리하며, 앱은 결제 카드 정보를 받지도, 저장하지도 않습니다. 구매 권한의 확인·복원에는 RevenueCat을 사용합니다 — 아래 "제3자 서비스" 참조.</li>
     </ul>
@@ -160,44 +201,77 @@
     <h2>권한</h2>
     <ul>
         <li><strong>카메라</strong> (필수) — 사진 촬영 및 실시간 필터 적용을 위해 사용됩니다.</li>
-        <li><strong>사진 라이브러리</strong> (선택) — 필터가 적용된 사진을 저장하고, 앱 내 삭제 경고를 보여줄 때 앱이 이전에 저장한 사본이 사진 앱에 남아 있는지 확인합니다. 이를 위해 읽기·쓰기 권한을 요청합니다. 불러올 사진은 iOS 시스템 선택 화면에서 사용자가 직접 고릅니다.</li>
-        <li><strong>사용 중 위치 정보</strong> (선택) — 기본 카메라 앱과 동일하게 사진 EXIF에 GPS를 임베딩합니다. 언제든지 거부하거나 회수할 수 있으며, 다른 기능에 영향을 주지 않습니다.</li>
+        <li><strong>사진 라이브러리</strong> (선택) — 필터가 적용된 사진을 저장하고, 앱 내 삭제 경고를 보여줄 때 앱이 이전에 저장한 사본이 사진 앱에 남아 있는지 확인합니다. 이를 위해 읽기·쓰기 권한을 요청하며, 읽기는 앱이 저장한 사진이 남아 있는지 확인하는 용도로만 사용됩니다. 불러올 사진은 iOS 시스템 선택 화면에서 사용자가 직접 고릅니다.</li>
+        <li><strong>사용 중 위치 정보</strong> (선택) — 앱의 카메라 설정에서 "위치 저장"을 함께 켜신 경우에만 사용되며, 기본 카메라 앱과 동일하게 촬영 시점의 좌표를 사진의 EXIF에 기록합니다. 갤러리 상세 화면의 도시 이름은 사진의 EXIF에 이미 들어 있는 GPS 좌표를 Apple에 보내 받아오는 것이므로, 이 권한을 허용하지 않아도 표시될 수 있습니다(위 "사진의 위치 정보" 항목 참조). 언제든지 거부하거나 회수할 수 있으며, 다른 기능에 영향을 주지 않습니다.</li>
     </ul>
 
     <h2>제3자 서비스 및 처리위탁</h2>
     <p>
-        앱은 제3자 분석, 광고, 크래시 리포팅, 추적 서비스를 사용하지 <strong>않습니다</strong>.
-        모든 이미지 필터링과 처리는 사용자의 기기 내에서 이루어집니다.
-        다만 결제 기능에 한해 아래 한 곳에 처리를 위탁합니다.
+        앱은 광고, 크래시 리포팅, 추적 서비스를 사용하지 <strong>않으며</strong>, 행동 분석을
+        목적으로 하는 별도의 분석 SDK도 탑재하지 않습니다. 모든 이미지 필터링과 처리는 사용자의
+        기기 내에서 이루어집니다. 개발자는 아래 RevenueCat 대시보드와 Apple이 제공하는
+        App Store Connect에서 구매 통계를 확인합니다.
+        구매·구독의 경우 결제는 Apple이 처리하며, 구매 권한의 확인·복원과 구매 통계 집계를
+        아래 RevenueCat 한 곳에 위탁합니다. 그 밖에 사진의 도시 이름을 조회할 때 iOS를 통해
+        Apple로 좌표가 전송됩니다(아래 Apple 항목 참조).
     </p>
     <ul>
-        <li><strong>RevenueCat, Inc. (미국) — 구독 관리.</strong>
+        <li><strong>RevenueCat, Inc. (미국) — 구매·구독 관리 및 구매 통계.</strong>
             구독·평생 구매 권한의 확인과 복원을 위해 앱은 RevenueCat 서버와
-            통신합니다(앱 실행 시 포함). 전송되는 정보: 무작위로 생성되는 익명 앱 사용자 ID,
-            구매·구독 거래 정보. 전송되지 <em>않는</em> 정보: 이름, 이메일, 결제 카드 정보,
-            사진, 위치, 광고식별자.</li>
+            통신합니다(앱 실행 시 포함).
+            전송되거나 통신 과정에서 RevenueCat이 취득하는 정보: RevenueCat이 무작위로
+            생성하는 앱 사용자 ID(앱은 이를 이름·이메일과 연결하지 않습니다), 구매·구독 거래 정보,
+            기기·앱에 관한 기본 정보(기기 모델, OS 및 앱 버전, 앱 번들 ID, 언어 설정,
+            스토어 국가, 벤더 식별자 IDFV), IP 주소.
+            이 RevenueCat 통신에서 앱이 전송하지 <em>않는</em> 정보: 이름, 이메일, 결제 카드 정보,
+            사진, 사진에 담긴 GPS 좌표, 광고식별자(IDFA).</li>
+        <li><strong>Apple Inc. (미국) — 도시 이름 조회.</strong>
+            앱 갤러리에서 GPS 좌표가 담긴 사진의 상세 화면을 열면, 도시 이름을 표시하기 위해
+            iOS가 그 좌표를 Apple로 전송합니다.
+            이때 앱이 넘기는 정보: 해당 사진의 GPS 좌표와, 도시 이름을 받아올 언어를 고정하기 위한
+            영어 로케일(en_US)입니다. 이 목적으로 사진 자체나 사용자 식별 정보, 구매 정보를 넘기지는
+            않습니다. 다만 요청 자체는 iOS Core Location 프레임워크가 수행하므로, 그 통신 과정에서
+            Apple이 추가로 취득하는 정보(예: IP 주소)의 취급에는
+            <a href="https://www.apple.com/legal/privacy/">Apple 개인정보처리방침</a>이 적용됩니다.
+            이 조회만 따로 끄는 설정은 없습니다. 전송을 피하시려면 GPS 좌표가 담긴 사진의 상세 화면을
+            열지 않으시면 됩니다. 카메라 설정에서 "위치 저장"을 끄면 앞으로 vismo로 촬영하는 사진에
+            좌표가 기록되지 않지만, 이미 좌표가 담긴 사진(불러온 사진 포함)에는 영향을 주지 않습니다.</li>
     </ul>
     <p>
-        위 구매 확인 외에 앱이 외부 서버로 네트워크 요청을 하는 경우는 없으며,
+        사용자가 직접 저장하거나 공유하는 사진을 제외하면, 앱이 외부 서비스로 보내는 정보는
+        위에서 설명한 구매 관련 통신과 도시 이름 표시를 위해 Apple로 전송되는 좌표뿐이며,
         개인정보를 판매하거나 맞춤형 광고 목적으로 공유하지 않습니다.
     </p>
 
     <h2>개인정보의 국외 이전</h2>
-    <p>구매 권한 확인·복원(처리위탁)을 위해 아래와 같이 개인정보가 국외로 이전됩니다.</p>
+    <p>아래 두 가지 경우에 개인정보가 국외로 이전됩니다.</p>
+
+    <h3>① 구매 권한 확인·복원 (처리위탁)</h3>
     <ul>
         <li><strong>이전받는 자</strong>: RevenueCat, Inc. (<a href="https://www.revenuecat.com/privacy">개인정보처리방침</a>)</li>
         <li><strong>이전되는 국가</strong>: 미국</li>
         <li><strong>이전 시기 및 방법</strong>: 앱 사용(실행·구매·복원) 시 / 암호화된 네트워크 전송</li>
-        <li><strong>이전되는 항목</strong>: 익명 앱 사용자 ID, 구매·구독 거래 정보</li>
-        <li><strong>이용 목적 및 보유·이용 기간</strong>: 구매 권한 확인·복원 / RevenueCat 개인정보처리방침에 따름</li>
+        <li><strong>이전되는 항목</strong>: 앱 사용자 ID(RevenueCat이 무작위 생성), 구매·구독 거래 정보, 기기·앱 기본 정보(기기 모델, OS 및 앱 버전, 앱 번들 ID, 언어 설정, 스토어 국가, 벤더 식별자 IDFV), IP 주소</li>
+        <li><strong>이용 목적 및 보유·이용 기간</strong>: 구매 권한 확인·복원 및 구매 통계 확인 / RevenueCat 개인정보처리방침에 따름</li>
         <li><strong>이전 거부 방법</strong>: 아래 연락처로 거부 의사를 밝힐 수 있으나, 이 경우 유료 구매·구독 기능의 이용이 제한될 수 있습니다.</li>
+    </ul>
+
+    <h3>② 사진의 도시 이름 조회 (제공)</h3>
+    <ul>
+        <li><strong>이전받는 자</strong>: Apple Inc. (<a href="https://www.apple.com/legal/privacy/">개인정보처리방침</a>)</li>
+        <li><strong>이전되는 국가</strong>: 미국 (Apple Inc. 소재지)</li>
+        <li><strong>이전 시기 및 방법</strong>: 앱 갤러리에서 GPS 좌표가 담긴 사진의 상세 화면을 열 때 / iOS Core Location 프레임워크를 통한 전송</li>
+        <li><strong>이전되는 항목</strong>: 해당 사진의 GPS 좌표 및 표시 언어 로케일(en_US). 통신 과정에서 Apple이 IP 주소 등 네트워크 수준 정보를 취득할 수 있습니다</li>
+        <li><strong>이용 목적 및 보유·이용 기간</strong>: 좌표에 해당하는 도시 이름 조회 / Apple 개인정보처리방침에 따름</li>
+        <li><strong>이전 거부 방법</strong>: 이 조회만 따로 끄는 설정은 없으며, GPS 좌표가 담긴 사진의 상세 화면을 열지 않으면 전송되지 않습니다. 카메라 설정에서 "위치 저장"을 끄면 이후 촬영하는 사진에 좌표가 기록되지 않지만, 이미 좌표가 담긴 사진에는 영향을 주지 않습니다</li>
     </ul>
 
     <h2>데이터 저장 및 삭제</h2>
     <p>
         그 외 모든 데이터(사진, 갤러리 인덱스, 환경 설정, 트라이얼 상태)는 사용자 기기에만 저장됩니다.
-        앱을 삭제하면 iOS가 로컬에 저장된 데이터를 함께 삭제합니다. 단, 동일 기기에서의 재설치 시
-        트라이얼 상태 유지를 위해 Keychain에 저장된 항목은 예외적으로 보존됩니다.
+        앱을 삭제하면 iOS가 로컬에 저장된 데이터를 함께 삭제합니다. 다만 동일 기기에서 재설치할 때
+        체험 기간이 다시 시작되지 않도록, Keychain에 저장된 트라이얼 시작일 등의 항목은
+        앱 삭제 후에도 기기에 남을 수 있습니다.
         사진 앱에 별도로 저장한 사진은 사진 앱에 그대로 남으며 iOS가 관리합니다.
         Apple·RevenueCat이 보유한 구매 기록은 각 사의 정책에 따라 관리되며,
         RevenueCat 보유 정보의 삭제는 아래 연락처로 요청하실 수 있습니다.
@@ -205,8 +279,12 @@
 
     <h2>안전성 확보 조치</h2>
     <p>
-        사진·위치 정보는 기기 밖으로 나가지 않으며, 구매 확인 통신은 전 구간
-        암호화(HTTPS)됩니다.
+        사진은 사용자가 사진 앱에 저장하거나 공유하기 전까지 앱의 저장 영역 안에 있습니다.
+        저장한 뒤에는 iOS가 관리하며, 기기 밖으로 나가는지는 사용자의 iCloud 사진 설정에 따릅니다.
+        위치 정보가 기기 밖으로 나가는 경우는, 위에서 설명한 대로 GPS 좌표가 담긴 사진의 상세 화면을
+        열어 도시 이름을 받아와야 할 때입니다. 또한 GPS 좌표가 담긴 사진을 공유하면 그 좌표도
+        사진과 함께 전달됩니다.
+        RevenueCat과의 통신은 전 구간 암호화(HTTPS)됩니다.
     </p>
 
     <h2>아동 개인정보 보호</h2>
@@ -241,7 +319,7 @@
     <!-- ===== 日本語 ===== -->
     <section id="ja">
     <h1>プライバシーポリシー</h1>
-    <p class="meta">vismo &nbsp;·&nbsp; 最終更新日: 2026年7月20日</p>
+    <p class="meta">vismo &nbsp;·&nbsp; 最終更新日: 2026年8月16日</p>
 
     <p>
         vismo（以下「本アプリ」）は Hyunjin Cho（以下「開発者」）が開発・運営しています。
@@ -251,63 +329,109 @@
     <h2>収集する情報</h2>
     <p>
         vismoはカメラと写真フィルターアプリです。本アプリは以下の情報を取り扱います。
-        購入・サブスクリプションの確認（下記「第三者サービス」参照）を除き、すべての情報は
-        ユーザーの端末内のみに保存され、外部サーバーへは送信されません。
+        本アプリまたは本アプリの機能に伴ってiOSが外部サービスへ情報を送信するのは、購入・
+        サブスクリプションの管理（決済はAppleが処理し、RevenueCatが利用権限の確認・復元および
+        購入状況の集計・分析を行います）と、「写真の位置情報」の項目で説明する都市名の取得です。
+        また、ユーザーご自身が写真を写真アプリへ保存した場合、その写真は本アプリの管理領域から
+        外れてiOSが管理し、端末外へ送信されるかどうかはユーザーのiCloud写真設定に従います。
+        共有した写真は、ユーザーが選択した共有先へ送信されます。
     </p>
     <ul>
         <li><strong>撮影またはインポートした写真</strong> — 本アプリ内のギャラリーに保存され、ユーザーの許可がある場合は写真アプリにも保存されます。</li>
-        <li><strong>位置情報（許可した場合のみ）</strong> — 位置情報の権限を許可すると、iOS標準カメラアプリと同じように、撮影した写真のEXIFメタデータにGPS座標が埋め込まれます。位置情報は外部サーバーに送信されず、ユーザー自身の写真ファイル内のみに記録されます。</li>
-        <li><strong>アプリ設定およびギャラリーインデックス</strong> — 選択したフィルター、保存フォーマットなどの設定と、保存された写真のインデックスがiOS標準のストレージAPIを通じて端末に保管されます。</li>
-        <li><strong>購入およびトライアル状態</strong> — 21日間の無料体験およびサブスクリプション（月額／年額）または永久購入のため、トライアル開始日と購入状態が端末内（iOS Keychain および UserDefaults）に保存されます。実際の決済はAppleが直接処理し、本アプリが決済カード情報を受け取ることも保存することもありません。有料機能の利用権限の確認・復元にはRevenueCatを使用します — 下記「第三者サービス」をご参照ください。</li>
+        <li><strong>写真の位置情報</strong> — 位置情報へのアクセスを許可し、本アプリのカメラ設定で「位置情報を保存」をオンにすると、iOS標準カメラアプリと同じように、撮影時に取得できたGPS座標が写真のEXIFメタデータに記録されます。開発者は独自のサーバーを運用していないため、位置情報が開発者へ送信されることはありません。一方、端末外への送信については、次の例外があります。これはvismoで撮影した写真に限りません。アプリ内ギャラリーの写真詳細画面を開いたとき、その写真のEXIFにGPS座標が含まれていれば（vismoで撮影した写真か、元のメタデータが保持されたままインポートされた写真かを問わず）、都市名を表示するために、その座標が<strong>Appleの逆ジオコーディング（GPS座標から地名を取得する処理）</strong>へ送信されます。この処理はiOS（Core Locationフレームワーク）が行い、Appleによるデータの取扱いには<a href="https://www.apple.com/legal/privacy/">Appleのプライバシーポリシー</a>が適用されます。vismoは取得した都市名を端末外に保存しません（開発者はサーバーを運用していないためです）。</li>
+        <li><strong>アプリ設定およびギャラリーの管理情報</strong> — 選択したフィルター、保存形式などの設定と、アプリ内ギャラリーに保存された写真の一覧・管理情報が端末内に保存されます。</li>
+        <li><strong>購入およびトライアル状態</strong> — 21日間の無料体験およびサブスクリプション（月額／年額）または買い切り購入のため、トライアル開始日と購入状態が端末内（iOS Keychain および UserDefaults）に保存されます。実際の決済はAppleが直接処理し、本アプリが決済カード情報を受け取ることも保存することもありません。有料機能の利用権限の確認・復元にはRevenueCatを使用します — 下記「第三者サービス」をご参照ください。</li>
     </ul>
 
     <h2>権限</h2>
     <ul>
         <li><strong>カメラ</strong>（必須） — 写真撮影とリアルタイムフィルター適用のために使用します。</li>
-        <li><strong>写真ライブラリ</strong>（任意） — フィルターを適用した写真を保存し、本アプリ内で削除時の注意を表示する際に、本アプリが以前保存したコピーが写真アプリに残っているかを確認します。そのために読み書きのアクセス権を要求します。インポートする写真は、iOSのシステムピッカーでユーザーが明示的に選択します。</li>
-        <li><strong>使用中の位置情報</strong>（任意） — 標準カメラアプリと同じように写真のEXIFにGPSを埋め込みます。いつでも拒否または取り消しが可能で、他の機能には影響しません。</li>
+        <li><strong>写真ライブラリ</strong>（任意） — フィルターを適用した写真を保存し、本アプリ内で削除時の注意を表示する際に、本アプリが以前保存したコピーが写真アプリに残っているかを確認します。本アプリは写真ライブラリへのアクセス許可を求めますが、この許可による読み取りは、本アプリが保存した写真の有無を確認する目的にのみ使用します。インポートする写真は、iOSのシステムピッカーでユーザーが明示的に選択します。</li>
+        <li><strong>使用中の位置情報</strong>（任意） — 本アプリのカメラ設定で「位置情報を保存」をオンにした場合にのみ使用し、標準カメラアプリと同じように、撮影時の座標を写真のEXIFに記録します。ギャラリー詳細画面に表示される都市名は、写真のEXIFにすでに含まれるGPS座標をAppleへ送信して取得するため、この権限を許可していなくても表示されることがあります（上記「写真の位置情報」をご参照ください）。いつでも拒否または取り消しが可能で、他の機能には影響しません。</li>
     </ul>
 
     <h2>第三者サービス</h2>
     <p>
-        本アプリは、第三者の分析、広告、クラッシュレポーティング、トラッキングサービスを一切
-        使用 <strong>しません</strong>。すべての画像フィルタリングと処理はユーザーの端末内で行われます。
-        ただし、購入機能に限り、以下の1社に個人データの取扱いを委託しています。
+        本アプリは、広告、クラッシュレポーティング、トラッキングサービスを
+        使用 <strong>しません</strong>。行動分析を目的とする分析SDKも組み込んでいません。
+        すべての画像フィルタリングと処理はユーザーの端末内で行われます。
+        開発者は、RevenueCatのダッシュボードおよびAppleが提供するApp Store Connectで
+        購入状況の集計を確認できます。
+        購入・サブスクリプションについては、決済をAppleが処理し、利用権限の確認・復元および
+        購入状況の集計・分析のために、以下のRevenueCat 1社へ取扱いを委託しています。
+        このほか、写真の都市名を取得する際に、iOSを通じてAppleへ座標が送信されます。
     </p>
     <ul>
-        <li><strong>RevenueCat, Inc.（米国） — サブスクリプション管理。</strong>
-            サブスクリプション・永久購入に伴う利用権限の確認と復元のため、本アプリは
-            RevenueCatのサーバーと通信します（アプリ起動時を含む）。送信される情報:
-            ランダムに生成される匿名アプリユーザーID、購入・サブスクリプション取引情報。
-            送信され<em>ない</em>情報: 氏名、メールアドレス、決済カード情報、写真、位置情報、
-            広告識別子。</li>
+        <li><strong>RevenueCat, Inc.（米国）：購入・サブスクリプション管理および購入状況の集計・分析。</strong>
+            サブスクリプションまたは買い切り購入に伴う利用権限の確認と復元のため、本アプリは
+            RevenueCatのサーバーと通信します（アプリ起動時を含む）。
+            送信され、または通信に伴ってRevenueCatが取得する情報：RevenueCatがランダムに生成する
+            アプリユーザーID（本アプリでは氏名やメールアドレスと紐付けていません）、
+            購入・サブスクリプションの取引情報、端末・アプリに関する基本情報（端末モデル、
+            OS・アプリのバージョン、アプリのバンドルID、言語設定、ストアの国、
+            ベンダー識別子（IDFV））、およびIPアドレス。
+            このRevenueCatとの通信で本アプリが送信し<em>ない</em>情報：氏名、メールアドレス、
+            決済カード情報、写真、写真に含まれるGPS座標、広告識別子（IDFA）。</li>
+        <li><strong>Apple Inc.（米国）：都市名の取得。</strong>
+            アプリ内ギャラリーでGPS座標を含む写真の詳細画面を開くと、都市名を表示するために、
+            iOSがその座標をAppleへ送信します。
+            このとき本アプリが渡す情報：その写真に含まれるGPS座標と、都市名の表示言語として指定する
+            固定の英語ロケール（en_US）です。この処理のために写真そのものやユーザーを識別する情報、
+            購入に関する情報を渡すことはありません。ただし送信自体はiOSのCore Locationフレームワークが
+            行うため、その通信に伴ってAppleが取得するその他の情報（IPアドレスなど）の取扱いには
+            <a href="https://www.apple.com/legal/privacy/">Appleのプライバシーポリシー</a>が
+            適用されます。
+            この送信だけを個別に無効化する設定はありません。送信を避けるには、GPS座標を含む写真の
+            詳細画面を開かないでください。カメラ設定の「位置情報を保存」をオフにすると、今後vismoで
+            撮影する写真へのGPS座標の記録は停止しますが、すでにGPS座標を含む写真やインポートした
+            写真には影響しません。</li>
     </ul>
     <p>
-        上記の購入確認以外に、本アプリが外部サーバーへネットワークリクエストを行うことはありません。
+        ユーザーご自身による写真の保存・共有を除き、本アプリがユーザーのデータを外部サービスへ
+        送信するのは、上記の購入に伴う通信と、都市名取得のためAppleへ送信する座標に限られます。
         個人情報を販売したり、広告目的で第三者と共有したりすることはありません。
     </p>
 
-    <h2>外国にある委託先への個人データの提供</h2>
+    <h2>国外への情報の送信</h2>
     <p>
-        有料機能の利用権限の確認・復元のため、米国に所在する RevenueCat, Inc. に上記の
-        個人データの取扱いを委託しています。米国の個人情報保護制度および RevenueCat が講じる保護措置については、
+        <strong>① RevenueCat, Inc.（委託）</strong><br>
+        有料機能の利用権限の確認・復元および購入状況の集計・分析のため、上記の情報は米国に所在する
+        RevenueCat, Inc. へ送信されます。RevenueCatによる情報の取扱いおよび同社が講じる保護措置については、
         <a href="https://www.revenuecat.com/privacy">RevenueCatのプライバシーポリシー</a>を
         ご確認ください。
+    </p>
+    <p>
+        <strong>② Apple Inc.（都市名の取得）</strong><br>
+        アプリ内ギャラリーでGPS座標を含む写真の詳細画面を開いた際、都市名を表示するために、
+        その写真のGPS座標が米国に所在する Apple Inc. へ送信されます。Appleによる情報の取扱いについては、
+        <a href="https://www.apple.com/legal/privacy/">Appleのプライバシーポリシー</a>をご確認ください。
+        この送信だけを個別に無効化する設定はなく、GPS座標を含む写真の詳細画面を開かなければ
+        送信は発生しません。
+    </p>
+    <p>
+        米国の個人情報保護制度については、個人情報保護委員会の
+        「外国における個人情報の保護に関する制度等の調査」をご確認ください。
     </p>
 
     <h2>データの保存と削除</h2>
     <p>
-        その他のすべてのデータ（写真、ギャラリーインデックス、設定、トライアル状態）はユーザーの
+        その他のすべてのデータ（写真、ギャラリーの管理情報、設定、トライアル状態）はユーザーの
         端末にのみ保存されます。アプリを削除すると、iOSがローカルに保存されたデータを一緒に削除します。
-        ただし、同じ端末での再インストール時にトライアル状態を維持するため、Keychainに保存された
-        項目は例外的に保存されます。写真アプリに別途保存した写真は写真アプリにそのまま残り、
-        iOSが管理します。Apple・RevenueCatが保有する購入記録は各社のポリシーに従って管理され、
-        RevenueCatが保有する情報の削除は下記の連絡先までご請求いただけます。
+        ただし、同じ端末で再インストールした際にトライアル期間が再び始まらないよう、Keychainに保存した
+        トライアル開始日などの項目は、アプリの削除後も端末に残る場合があります。
+        写真アプリに別途保存した写真は写真アプリにそのまま残り、
+        iOSが管理します。Apple・RevenueCatが保有する購入記録は各社のポリシーに従って管理されます。
+        RevenueCatが保有する情報の削除を希望する場合は、下記の連絡先までお問い合わせください。
     </p>
 
-    <h2>安全管理措置</h2>
+    <h2>端末外への送信と通信の保護</h2>
     <p>
-        写真・位置情報は端末外へ送信されません。購入確認に係る通信はHTTPSにより暗号化されます。
+        写真は、ユーザーが写真アプリへ保存または共有するまで本アプリの管理領域内にあります。
+        保存後はiOSが管理し、端末外へ送信されるかどうかはユーザーのiCloud写真設定に従います。
+        位置情報が端末外へ出るのは、GPS座標を含む写真の詳細画面を開き、都市名を取得する必要がある
+        場合に、iOSがAppleへGPS座標を送信するときです。なお、GPS座標を含む写真を共有した場合は、
+        共有方法や設定によっては、その座標も共有先へ渡ることがあります。
+        RevenueCatとの通信はHTTPSにより暗号化されます。
     </p>
 
     <h2>児童のプライバシー</h2>
