@@ -39,7 +39,11 @@
     <p class="lang-switch">
         <a href="#en">English</a> ·
         <a href="#ko">한국어</a> ·
-        <a href="#ja">日本語</a>
+        <a href="#ja">日本語</a> ·
+        <a href="#zh-Hant">繁體中文</a> ·
+        <a href="#zh-Hant-HK">繁體中文（香港）</a> ·
+        <a href="#th">ไทย</a> ·
+        <a href="#id">Bahasa Indonesia</a>
     </p>
 
     <!-- ===== English ===== -->
@@ -130,7 +134,7 @@
             on, iOS sends coordinates to Apple twice: to its geocoding service for a short place
             name, and to its WeatherKit service for the current temperature of that area.
             What the App passes on for this: for the place name, the coordinates rounded to a
-            0.01-degree grid (roughly 1.1 km) together with the App's display language; for the
+            0.01-degree grid (roughly 1.1&nbsp;km) together with the App's display language; for the
             temperature, the coordinates rounded to a <strong>0.1-degree grid (roughly 11 km)</strong>.
             The App does not pass your photo, any identifier of yours, or any purchase information
             for this purpose. Both requests are made by iOS frameworks, so anything Apple
@@ -525,6 +529,585 @@
         <a href="mailto:vismo.support@gmail.com">vismo.support@gmail.com</a>
     </p>
     <p><a href="support/">vismoサポート</a></p>
+    </section>
+
+    <!-- ===== 繁體中文 ===== -->
+<section id="zh-Hant">
+<h1>隱私權政策</h1>
+<p class="meta">vismo &nbsp;·&nbsp; 最後更新：2026 年 8 月 26 日</p>
+
+<p>
+    vismo（以下稱「本 App」）由 Hyunjin Cho（以下稱「本人」）開發與維護。
+    本隱私權政策說明本 App 收集哪些資訊，以及這些資訊的使用方式。
+</p>
+
+<h2>資訊收集</h2>
+<p>
+    vismo 是一款相機與照片濾鏡 App。本 App 處理下列資訊。本 App —— 或代其執行作業的 iOS ——
+    會在下列情況下將資訊傳送至外部服務：購買與訂閱管理（由 Apple 處理付款，
+    RevenueCat 負責驗證與回復您的購買權益並彙整購買統計資料）、
+    「照片中的位置資料」一節所述的城市名稱查詢，以及「Instant 濾鏡的地名與氣溫」一節所述的
+    地名與氣溫查詢。上述每一項位置查詢皆由 iOS 提出並傳送給 Apple；其中沒有任何一項會
+    傳達給本人。此外，您儲存至「照片」App 的照片，
+    會離開本 App 自有的儲存範圍並改由 iOS 管理；這些照片是否進而離開裝置，取決於您的
+    iCloud 照片設定，而您分享出去的照片則會傳送至您所選擇的任何目的地。
+</p>
+<ul>
+    <li><strong>您拍攝或匯入的照片</strong> — 儲存於裝置上本 App 的圖庫中，並在取得您的許可後儲存至您的「照片」App。</li>
+    <li><strong>照片中的位置資料</strong> — 若您授予位置權限，並在本 App 的相機設定中開啟「儲存位置」，則拍攝當下可取得的 GPS 座標會嵌入您所拍照片的 EXIF 中繼資料中，方式與內建「相機」App 相同。本人並未營運任何伺服器，因此位置資料絕不會傳送給本人。惟有一項例外，且該例外並不限於您以 vismo 拍攝的照片：只要您在本 App 圖庫的照片詳細畫面中開啟一張 EXIF 內含 GPS 座標的照片 —— 無論該照片是以 vismo 拍攝，或是自您的圖庫匯入且原始中繼資料完好無缺 —— 這些座標便會傳送至 <strong>Apple 的地理編碼服務</strong>，以便顯示城市名稱。此項查詢由 iOS 本身（Core Location 框架）執行，Apple 對該要求的處理方式受 <a href="https://www.apple.com/legal/privacy/">Apple 隱私權政策</a>規範。vismo 不會將查詢結果儲存於您裝置以外的任何地方 —— 本人並未營運伺服器。</li>
+    <li><strong>Instant 濾鏡的地名與氣溫</strong> — 當您在已授予位置權限且開啟「儲存位置」的狀態下使用 Instant 濾鏡時，會另外進行兩項查詢；兩者皆由 iOS 本身執行，且僅在使用該濾鏡期間發生。第一，一個約略的位置 —— 將座標四捨五入至 0.01 度網格，約 1.1&nbsp;km —— 會傳送至 <strong>Apple 的地理編碼服務</strong>以取得簡短的地名，該地名會以手寫字體標示於 Instant 卡片的留白處；與上述圖庫查詢不同，此項要求是以本 App 的顯示語言提出，因此國外的地點也能以您自己的語言顯示。第二，一個<strong>約略</strong>的位置 —— 將座標四捨五入至 0.1 度網格，約 11 km —— 會傳送至 <strong>Apple 的 WeatherKit 服務</strong>，以取得該區域的目前氣溫。該氣溫絕不會顯示、絕不會寫入照片，也絕不會被儲存：它僅作為濾鏡色彩表現的輸入值之一，使在寒冷中拍攝的照片，呈現得比在炎熱中拍攝的照片略為冷調。兩項要求皆由 iOS 提出，受 <a href="https://www.apple.com/legal/privacy/">Apple 隱私權政策</a>規範，且絕不會傳送給本人 —— 本人並未營運伺服器。若您關閉「儲存位置」或拒絕位置權限，這兩項查詢都完全不會發生。天氣資料由 Weather 提供；Apple 提供的資料已經過修改。</li>
+    <li><strong>App 設定與圖庫索引</strong> — 您的偏好設定（所選濾鏡、儲存格式等）以及已儲存照片的索引，會透過標準 iOS 儲存 API 保存於您的裝置上。</li>
+    <li><strong>購買與試用狀態</strong> — 為提供 21 天免費試用與訂閱／買斷制購買，試用開始日期與購買狀態會在本機儲存於您的裝置上（使用 iOS Keychain 與 UserDefaults）。付款本身由 Apple 處理；本 App 絕不會接收或儲存您的付款卡片資訊。為驗證與回復您的購買權益，本 App 使用 RevenueCat —— 請參閱下方「第三方服務」。</li>
+</ul>
+
+<h2>權限</h2>
+<ul>
+    <li><strong>相機</strong>（必要） — 用於拍攝照片並即時套用濾鏡。</li>
+    <li><strong>照片圖庫</strong>（選用） — 用於儲存套用濾鏡後的照片，以及在本 App 顯示刪除警告時，確認本 App 先前儲存的副本是否仍然存在。本 App 為上述目的要求讀取／寫入權限；其中讀取僅用於確認本 App 自行儲存的照片是否仍在。要匯入的照片一律由您透過 iOS 系統選取器明確選擇。</li>
+    <li><strong>使用 App 期間的位置權限</strong>（選用） — 僅在您同時於本 App 的相機設定中開啟「儲存位置」時才會使用；在此情況下，拍攝當下可取得的座標會如同內建「相機」App 一般寫入照片的 EXIF。圖庫詳細畫面所顯示的城市名稱，是將照片 EXIF 中既有的 GPS 座標傳送給 Apple 而取得，因此即使您從未授予此權限，仍可能顯示（請參閱上方「照片中的位置資料」）。您可隨時拒絕或撤銷此權限，且不影響其他功能。</li>
+</ul>
+
+<h2>第三方服務</h2>
+<p>
+    本 App <strong>不</strong>使用任何廣告、當機回報或追蹤服務，也未內嵌任何行為分析 SDK。
+    所有影像濾鏡處理與運算皆在您的裝置上完成。本人可透過下述 RevenueCat 儀表板，
+    以及 Apple 的 App Store Connect，查看彙總後的購買統計資料。
+</p>
+<p>
+    關於購買，付款由 Apple 自行處理，並有<strong>一</strong>家第三方公司 —— RevenueCat ——
+    代本人驗證與回復您的購買權益。此外，當顯示城市名稱時，iOS 會將照片座標傳送給 Apple；
+    而在使用 Instant 濾鏡且「儲存位置」為開啟狀態時，亦會傳送座標以取得地名與該約略區域的
+    目前氣溫。以上各項均說明於下。
+</p>
+<ul>
+    <li><strong>RevenueCat, Inc.（美國） — 購買與訂閱管理，以及購買統計。</strong>
+        為驗證與回復您的訂閱或買斷制購買權益，本 App 會與 RevenueCat 伺服器通訊
+        （包括本 App 啟動時）。
+        在該通訊中傳送、或由 RevenueCat 取得的資訊：
+        RevenueCat 隨機產生的 App 使用者 ID（本 App 絕不會將其與姓名或電子郵件地址連結）、
+        購買與訂閱交易資訊、基本的裝置與 App 資訊（裝置型號、作業系統與 App 版本、
+        App Bundle ID、語言設定、商店所在國家，以及供應商識別碼 IDFV），以及您的 IP 位址。
+        本 App 在此通訊中<em>不會</em>傳送給 RevenueCat 的資訊：您的姓名、
+        電子郵件地址、付款卡片明細、您的照片、您照片中的 GPS 座標，
+        或廣告識別碼（IDFA）。
+        這些資料會傳輸至<strong>美國</strong>並於當地處理，且依照
+        <a href="https://www.revenuecat.com/privacy">RevenueCat 隱私權政策</a>予以保留。</li>
+    <li><strong>Apple Inc.（美國） — 城市名稱查詢。</strong>
+        當您在本 App 圖庫的詳細畫面中開啟一張含有 GPS 座標的照片時，
+        iOS 會將該座標傳送給 Apple，以便顯示城市名稱。
+        本 App 為此傳遞的資訊：該照片中儲存的 GPS 座標，
+        以及用以固定所回傳城市名稱語言的固定英文地區設定（en_US）。
+        本 App 不會為此目的傳遞您的照片、您的任何識別碼或任何購買資訊。該要求本身由
+        iOS Core Location 框架提出，因此 Apple 在該網路要求中額外取得的任何資訊
+        （例如您的 IP 位址），均依
+        <a href="https://www.apple.com/legal/privacy/">Apple 隱私權政策</a>處理。
+        並無單獨關閉此項查詢的開關：若要避免，請勿開啟含有 GPS 座標之照片的圖庫詳細畫面。
+        關閉「儲存位置」可使日後以 vismo 拍攝的照片不再記錄座標，但不會改變
+        已含有座標的照片，包括匯入的照片。</li>
+    <li><strong>Apple Inc.（美國） — Instant 濾鏡的地名與氣溫。</strong>
+        當您在已授予位置權限且開啟「儲存位置」的狀態下使用 Instant 濾鏡時，
+        iOS 會將座標傳送給 Apple 兩次：一次傳送至其地理編碼服務以取得簡短的地名，
+        另一次傳送至其 WeatherKit 服務以取得該區域的目前氣溫。
+        本 App 為此傳遞的資訊：就地名而言，是四捨五入至 0.01 度網格（約 1.1&nbsp;km）的座標，
+        連同本 App 的顯示語言；就氣溫而言，是四捨五入至
+        <strong>0.1 度網格（約 11 km）</strong>的座標。
+        本 App 不會為此目的傳遞您的照片、您的任何識別碼或任何購買資訊。兩項要求皆由
+        iOS 框架提出，因此 Apple 在該等網路要求中額外取得的任何資訊（例如您的 IP 位址），
+        均依 <a href="https://www.apple.com/legal/privacy/">Apple 隱私權政策</a>處理。
+        與上述城市名稱查詢不同，只要您關閉「儲存位置」或拒絕位置權限，這兩項查詢便會完全停止
+        —— 在此情況下，座標絕不會為了 Instant 濾鏡而離開裝置。
+        天氣資料由 <strong>Weather</strong> 提供；Apple 提供的資料已經過修改。</li>
+</ul>
+<p>
+    除您自行儲存或分享的照片外，本 App 傳送至外部服務的資料，僅有上述與購買相關的通訊，
+    以及傳送給 Apple 以顯示城市名稱、為 Instant 濾鏡取得地名，並在四捨五入至約 11 km
+    網格後取得該區域目前氣溫的座標。本人<strong>不</strong>會出售您的個人資料，
+    也不會為跨情境行為廣告而分享您的個人資料。
+</p>
+
+<h2>資料的儲存與刪除</h2>
+<p>
+    所有其他資料（照片、圖庫索引、設定、試用狀態）皆在本機儲存於您的裝置上。
+    當您刪除本 App 時，iOS 會移除所有本機儲存的資料；用以保留試用狀態的 Keychain 項目
+    （例如試用開始日期）可能仍會留存在裝置上，使得在同一部裝置上重新安裝時不會重新開始試用。
+    您已儲存至「照片」App 的照片，會留在您的「照片」App 中並由 iOS 管理。
+    Apple 與 RevenueCat 所保有的購買記錄，依其各自政策管理；
+    您可透過下方聯絡電子郵件，要求刪除 RevenueCat 所保有的資料。
+</p>
+
+<h2>安全性</h2>
+<p>
+    除非您將照片儲存至「照片」App 或加以分享，否則照片會留在本 App 自有的儲存範圍內；
+    一旦儲存後即由 iOS 管理，是否離開裝置則取決於您的 iCloud 照片設定。
+    位置資料會在兩種情況下離開您的裝置，兩者皆已於上文說明：一是當您開啟含有 GPS 座標之
+    照片的圖庫詳細畫面，而必須取得城市名稱時；二是當您在「儲存位置」為開啟狀態下使用
+    Instant 濾鏡，而需取得地名與該區域的約略氣溫時。若您分享一張 EXIF 中含有 GPS 座標的照片，
+    該座標會隨照片一併傳送至您所指定的目的地。
+    與 RevenueCat 之間的通訊在傳輸過程中經過加密（HTTPS）。
+</p>
+
+<h2>兒童隱私</h2>
+<p>
+    本 App 不會在知情的情況下收集任何未滿 13 歲兒童的資訊。
+</p>
+
+<h2>本政策的變更</h2>
+<p>
+    本隱私權政策可能不時更新。任何變更將反映於本頁面，
+    並一併更新「最後更新」日期。
+</p>
+
+<h2>聯絡方式</h2>
+<p>
+    若您對本隱私權政策有任何疑問，請聯絡：<br>
+    <a href="mailto:vismo.support@gmail.com">vismo.support@gmail.com</a>
+</p>
+<p><a href="support/">vismo 支援服務</a></p>
+</section>
+
+    <!-- ===== 繁體中文（香港） ===== -->
+<section id="zh-Hant-HK">
+<h1>私隱政策</h1>
+<p class="meta">vismo &nbsp;·&nbsp; 最後更新日期：2026年8月26日</p>
+
+<p>
+    vismo（下稱「本應用程式」）由 Hyunjin Cho（下稱「我」）開發及維護。
+    本私隱政策說明本應用程式收集哪些資料，以及該等資料的使用方式。
+</p>
+
+<h2>資料收集</h2>
+<p>
+    vismo 是一款相機及相片濾鏡應用程式。本應用程式處理以下資料。
+    本應用程式——或代其執行的 iOS——會在以下情況把資料傳送至外部服務：購買及訂閱管理
+    （付款由 Apple 處理；RevenueCat 核實及回復你的使用權限，並匯總購買統計）、
+    「相片中的位置資料」一節所述的城市名稱查詢，以及「Instant 濾鏡的地名及氣溫」一節所述的
+    地名及氣溫查詢。上述每一項位置查詢均由 iOS 發出並傳送至 Apple；當中並無任何一項會
+    傳送給我。另外，你儲存至「相片」圖庫的相片
+    會離開本應用程式本身的儲存範圍，改由 iOS 管理；該等相片其後會否離開裝置，
+    取決於你的 iCloud 相片設定；而你分享出去的相片，則會傳送至你所選擇的目的地。
+</p>
+<ul>
+    <li><strong>你拍攝或匯入的相片</strong> — 儲存於你裝置上本應用程式的相簿內；在你授權的情況下，亦會儲存至「相片」圖庫。</li>
+    <li><strong>相片中的位置資料</strong> — 如果你授予位置權限，並在本應用程式的相機設定中開啟「儲存位置」，拍攝當時所取得的 GPS 座標便會嵌入你所拍相片的 EXIF 元數據之中，做法與內置的「相機」應用程式相同。我並無營運任何伺服器，因此位置資料絕不會傳送給我。惟有一項例外，而且不限於你以 vismo 拍攝的相片：每當你在本應用程式相簿的相片詳情畫面開啟一張相片，而該相片的 EXIF 載有 GPS 座標時——無論該相片是以 vismo 拍攝，抑或是連同原有元數據一併從你的圖庫匯入——該等座標都會傳送至 <strong>Apple 的地理編碼服務</strong>，以便顯示城市名稱。此項查詢由 iOS 本身（Core Location 框架）執行，而 Apple 對該請求的處理受 <a href="https://www.apple.com/legal/privacy/">Apple 私隱政策</a>規管。vismo 不會把查詢結果儲存於你裝置以外的任何地方——我並無營運伺服器。</li>
+    <li><strong>Instant 濾鏡的地名及氣溫</strong> — 當你在已授予位置權限並開啟「儲存位置」的情況下使用 Instant 濾鏡時，會額外進行兩項查詢；兩項均由 iOS 本身執行，且只在使用該濾鏡期間發生。第一，一個約略位置——即把座標捨入至 0.01 度網格（約 1.1&nbsp;km）後的數值——會傳送至 <strong>Apple 的地理編碼服務</strong>，以取得一個簡短地名，該地名會以手寫字體寫在 Instant 卡片的留白處；與上述相簿查詢不同，此項請求以本應用程式的顯示語言發出，因此身處外地的地名亦可以你自己的語言顯示。第二，一個<strong>約略</strong>位置——即把座標捨入至 0.1 度網格（約 11 km）後的數值——會傳送至 <strong>Apple 的 WeatherKit 服務</strong>，以取得該區域的即時氣溫。該氣溫絕不會顯示、絕不會寫入相片，亦絕不會儲存：它只用作濾鏡色彩呈現的其中一項輸入值，令在寒冷天氣下拍攝的相片，比在炎熱天氣下拍攝的略為偏冷。兩項請求均由 iOS 發出，受 <a href="https://www.apple.com/legal/privacy/">Apple 私隱政策</a>規管，並且絕不會傳送給我——我並無營運伺服器。如果你關閉「儲存位置」或拒絕授予位置權限，這兩項查詢均完全不會發生。天氣數據由 Weather 提供；Apple 所提供的數據已經過修改。</li>
+    <li><strong>應用程式設定及相簿索引</strong> — 你的偏好設定（已選濾鏡、儲存格式等）及已儲存相片的索引，會透過 iOS 標準儲存 API 保存於你的裝置上。</li>
+    <li><strong>購買及試用狀態</strong> — 為提供 21 天免費試用及訂閱／永久購買，試用開始日期與購買狀態會本機儲存於你的裝置上（使用 iOS 鑰匙串及 UserDefaults）。付款本身由 Apple 處理；本應用程式絕不會接收或儲存你的付款卡資料。為核實及回復你的購買權限，本應用程式使用 RevenueCat — 詳見下文「第三方服務」。</li>
+</ul>
+
+<h2>權限</h2>
+<ul>
+    <li><strong>相機</strong>（必需） — 用於拍攝相片及即時套用濾鏡。</li>
+    <li><strong>相片圖庫</strong>（可選） — 用於儲存已套用濾鏡的相片，以及在本應用程式顯示刪除警告時，檢查本應用程式先前儲存的副本是否仍然存在。本應用程式為上述目的要求讀取／寫入權限；當中的讀取只用於檢查本應用程式自行儲存的相片是否仍在。要匯入的相片，須由你透過 iOS 系統選取器明確選擇。</li>
+    <li><strong>使用應用程式期間的位置</strong>（可選） — 只有在你同時於本應用程式的相機設定中開啟「儲存位置」時才會使用；在此情況下，拍攝當刻所取得的座標會寫入相片的 EXIF，做法與內置的「相機」應用程式相同。相簿詳情畫面所顯示的城市名稱，是把相片 EXIF 中已載有的 GPS 座標傳送給 Apple 而取得，因此即使你從未授予此權限，城市名稱仍有可能顯示（見上文「相片中的位置資料」）。你可隨時拒絕或撤回此權限，而不影響其他功能。</li>
+</ul>
+
+<h2>第三方服務</h2>
+<p>
+    本應用程式<strong>並無</strong>使用任何廣告、當機報告或追蹤服務，亦沒有嵌入任何行為分析
+    SDK。所有影像濾鏡處理及運算，全部在你的裝置上進行。我可透過下文所述的 RevenueCat
+    儀表板，以及 Apple 的 App Store Connect，查看匯總後的購買統計。
+</p>
+<p>
+    就購買而言，付款由 Apple 自行處理，而<strong>一間</strong>第三方公司——RevenueCat——
+    代我核實及回復你的使用權限。另外，當顯示城市名稱時，iOS 會把相片座標傳送給 Apple；
+    而在開啟「儲存位置」並使用 Instant 濾鏡期間，亦會傳送座標以取得地名及該約略區域的
+    即時氣溫。以上各項均於下文說明。
+</p>
+<ul>
+    <li><strong>RevenueCat, Inc.（美國）— 購買及訂閱管理，以及購買統計。</strong>
+        為核實及回復你的訂閱或永久購買權限，本應用程式會與 RevenueCat 伺服器通訊
+        （包括在應用程式啟動時）。
+        在該通訊中傳送出去，或由 RevenueCat 在通訊過程中取得的資料：
+        由 RevenueCat 隨機產生的應用程式使用者 ID（本應用程式絕不會將其與姓名或
+        電郵地址連結）、購買及訂閱交易資料、
+        基本裝置及應用程式資料（裝置型號、作業系統及應用程式版本、應用程式套件 ID、
+        語言設定、商店所在國家或地區，以及供應商識別碼 IDFV），以及你的 IP 位址。
+        本應用程式在該通訊中<em>不會</em>傳送給 RevenueCat 的資料：你的姓名、
+        電郵地址、付款卡詳情、你的相片、你相片中的 GPS 座標，
+        或廣告識別碼（IDFA）。
+        該等資料會傳輸至<strong>美國</strong>並在當地處理，
+        保留期限則按
+        <a href="https://www.revenuecat.com/privacy">RevenueCat 私隱政策</a>而定。</li>
+    <li><strong>Apple Inc.（美國）— 城市名稱查詢。</strong>
+        當你在本應用程式的相簿詳情畫面開啟一張載有 GPS 座標的相片時，
+        iOS 會把該等座標傳送給 Apple，以便顯示城市名稱。
+        本應用程式為此傳遞的資料：該相片所儲存的 GPS 座標，連同一個固定的
+        英文地區設定（en_US），用以固定所返回城市名稱的語言。
+        本應用程式不會為此目的傳遞你的相片、你的任何識別碼，或任何購買資料。
+        由於該請求本身由 iOS Core Location 框架發出，Apple 在該網絡請求過程中額外取得的
+        任何資料（例如你的 IP 位址），均按
+        <a href="https://www.apple.com/legal/privacy/">Apple 私隱政策</a>處理。
+        並無單獨關閉此項查詢的設定：若要避免，請勿開啟載有 GPS 座標的相片的詳情畫面。
+        關閉「儲存位置」可令日後以 vismo 拍攝的相片不再記錄座標，但不會改變
+        已載有座標的相片，包括匯入的相片。</li>
+    <li><strong>Apple Inc.（美國）— Instant 濾鏡的地名及氣溫。</strong>
+        當你在已授予位置權限並開啟「儲存位置」的情況下使用 Instant 濾鏡期間，
+        iOS 會兩次把座標傳送給 Apple：一次傳送至其地理編碼服務以取得簡短地名，
+        另一次傳送至其 WeatherKit 服務以取得該區域的即時氣溫。
+        本應用程式為此傳遞的資料：就地名而言，是把座標捨入至
+        0.01 度網格（約 1.1&nbsp;km）後的數值，連同本應用程式的顯示語言；就氣溫而言，
+        是把座標捨入至<strong>0.1 度網格（約 11 km）</strong>後的數值。
+        本應用程式不會為此目的傳遞你的相片、你的任何識別碼，或任何購買資料。
+        由於兩項請求均由 iOS 框架發出，Apple 在該等網絡請求過程中額外取得的任何資料
+        （例如你的 IP 位址），均按 <a href="https://www.apple.com/legal/privacy/">Apple 私隱政策</a>處理。
+        與上述城市名稱查詢不同，只要你關閉「儲存位置」或拒絕授予位置權限，這兩項查詢
+        便會完全停止——在該情況下，座標絕不會為 Instant 濾鏡而離開你的裝置。
+        天氣數據由 <strong>Weather</strong> 提供；Apple 所提供的數據已經過修改。</li>
+</ul>
+<p>
+    除了你自行儲存或分享的相片外，本應用程式傳送至外部服務的資料，僅限於上述與購買相關的
+    通訊，以及為顯示城市名稱、為 Instant 濾鏡取得地名，並在捨入至約 11 km 網格後
+    取得該區域即時氣溫而傳送給 Apple 的座標。我<strong>不會</strong>出售你的個人資料，
+    亦不會為跨情境行為廣告而分享你的個人資料。
+</p>
+
+<h2>資料儲存與刪除</h2>
+<p>
+    所有其他資料（相片、相簿索引、設定、試用狀態）均本機儲存於你的裝置上。當你刪除本應用程式時，
+    iOS 會移除所有本機儲存的資料；至於保存試用狀態的鑰匙串項目（例如試用開始日期）
+    則可能仍留在裝置上，以免在同一部裝置上重新安裝時試用期重新開始。
+    你已儲存至「相片」圖庫的相片，會繼續保留在你的相片圖庫中，並由 iOS 管理。
+    Apple 與 RevenueCat 所持有的購買紀錄，按其各自的政策管理；你可透過下方的
+    聯絡電郵，要求刪除 RevenueCat 所持有的資料。
+</p>
+
+<h2>保安</h2>
+<p>
+    除非你把相片儲存至「相片」圖庫或加以分享，否則相片只會留在本應用程式本身的儲存範圍內；
+    一經儲存，即由 iOS 管理，而相片會否離開裝置，則取決於你的 iCloud 相片設定。
+    位置資料離開你裝置的情況有兩種，兩者均已於上文說明：一是當你開啟載有 GPS
+    座標的相片的詳情畫面，而需要取得城市名稱時；二是當你在開啟「儲存位置」的情況下
+    使用 Instant 濾鏡，而需要取得地名及該約略區域的氣溫時。若你分享一張 EXIF
+    載有 GPS 座標的相片，該等座標會隨相片一同傳送至你所發送的目的地。
+    與 RevenueCat 的通訊在傳輸過程中經過加密（HTTPS）。
+</p>
+
+<h2>兒童私隱</h2>
+<p>
+    本應用程式不會在知情的情況下收集任何 13 歲以下兒童的資料。
+</p>
+
+<h2>本政策的變更</h2>
+<p>
+    本私隱政策可能不時更新。任何變更均會反映於本頁，並一併更新「最後更新日期」。
+</p>
+
+<h2>聯絡方式</h2>
+<p>
+    如你對本私隱政策有任何疑問，請聯絡：<br>
+    <a href="mailto:vismo.support@gmail.com">vismo.support@gmail.com</a>
+</p>
+<p><a href="support/">vismo 支援</a></p>
+</section>
+
+    <!-- ===== ไทย ===== -->
+<section id="th">
+<h1>นโยบายความเป็นส่วนตัว</h1>
+<p class="meta">vismo &nbsp;·&nbsp; อัปเดตล่าสุด: 26 สิงหาคม 2026</p>
+
+<p>
+    vismo (ต่อไปนี้เรียกว่า "แอป") พัฒนาและดูแลโดย Hyunjin Cho (ต่อไปนี้เรียกว่า "ข้าพเจ้า")
+    นโยบายความเป็นส่วนตัวฉบับนี้อธิบายว่าแอปเก็บรวบรวมข้อมูลใดบ้าง และนำข้อมูลนั้นไปใช้อย่างไร
+</p>
+
+<h2>ข้อมูลที่เก็บรวบรวม</h2>
+<p>
+    vismo เป็นแอปกล้องและฟิลเตอร์รูปภาพ แอปจัดการข้อมูลดังต่อไปนี้ กรณีที่แอป — หรือ iOS
+    ซึ่งทำงานแทนแอป — ส่งข้อมูลออกไปยังบริการภายนอกมีดังนี้ ได้แก่ การจัดการการซื้อและ
+    การสมัครสมาชิก (Apple เป็นผู้ดำเนินการชำระเงิน ส่วน RevenueCat ทำหน้าที่ตรวจสอบและกู้คืน
+    สิทธิ์การใช้งานของท่าน รวมทั้งรวบรวมสถิติการซื้อ) การค้นหาชื่อเมืองตามที่อธิบายไว้ในหัวข้อ
+    "ข้อมูลตำแหน่งที่ตั้งในรูปภาพ" และการค้นหาชื่อสถานที่กับอุณหภูมิตามที่อธิบายไว้ในหัวข้อ
+    "ชื่อสถานที่และอุณหภูมิสำหรับฟิลเตอร์ Instant" การค้นหาตำแหน่งที่ตั้งทุกรายการดังกล่าว
+    ดำเนินการโดย iOS และส่งไปยัง Apple ทั้งสิ้น ไม่มีรายการใดส่งมาถึงข้าพเจ้า นอกเหนือจากนี้
+    รูปภาพที่ท่านบันทึกลงในคลังรูปภาพจะออกจากพื้นที่จัดเก็บของแอปเองและอยู่ภายใต้การจัดการของ iOS
+    ส่วนที่ว่ารูปภาพเหล่านั้นจะออกจากเครื่องหรือไม่ขึ้นอยู่กับการตั้งค่า iCloud Photos ของท่าน
+    และรูปภาพที่ท่านแชร์จะถูกส่งไปยังปลายทางที่ท่านเลือกเอง
+</p>
+<ul>
+    <li><strong>รูปภาพที่ท่านถ่ายหรือนำเข้า</strong> — จัดเก็บไว้ในแกลเลอรีของแอปบนเครื่องของท่าน และหากท่านให้ความยินยอม จะบันทึกลงในคลังรูปภาพของท่านด้วย</li>
+    <li><strong>ข้อมูลตำแหน่งที่ตั้งในรูปภาพ</strong> — หากท่านอนุญาตให้เข้าถึงตำแหน่งที่ตั้ง และเปิดใช้งาน "บันทึกตำแหน่งที่ตั้ง" ในการตั้งค่ากล้องของแอป พิกัด GPS ที่ได้รับ ณ เวลาที่ถ่ายจะถูกฝังไว้ในข้อมูลเมตา EXIF ของรูปภาพที่ท่านถ่าย เช่นเดียวกับที่แอปกล้องในตัวของเครื่องทำ ข้าพเจ้าไม่ได้ให้บริการเซิร์ฟเวอร์ใด ๆ ข้อมูลตำแหน่งที่ตั้งจึงไม่ถูกส่งมายังข้าพเจ้าเลย มีข้อยกเว้นอยู่หนึ่งกรณี และไม่ได้จำกัดเฉพาะรูปภาพที่ท่านถ่ายด้วย vismo เท่านั้น กล่าวคือ เมื่อใดที่ท่านเปิดหน้ารายละเอียดของรูปภาพในแกลเลอรีของแอป และรูปภาพนั้นมีพิกัด GPS อยู่ใน EXIF — ไม่ว่าจะเป็นรูปที่ถ่ายด้วย vismo หรือรูปที่นำเข้าจากคลังรูปภาพของท่านโดยยังคงข้อมูลเมตาเดิมไว้ก็ตาม — พิกัดดังกล่าวจะถูกส่งไปยัง<strong>บริการแปลงพิกัดเป็นชื่อสถานที่ (geocoding) ของ Apple</strong> เพื่อให้แสดงชื่อเมืองได้ การค้นหานี้ดำเนินการโดย iOS เอง (ผ่านเฟรมเวิร์ก Core Location) และการที่ Apple จัดการคำขอดังกล่าวอยู่ภายใต้<a href="https://www.apple.com/legal/privacy/">นโยบายความเป็นส่วนตัวของ Apple</a> vismo ไม่ได้จัดเก็บผลลัพธ์ที่ได้ไว้ ณ ที่ใดนอกเครื่องของท่าน — ข้าพเจ้าไม่ได้ให้บริการเซิร์ฟเวอร์</li>
+    <li><strong>ชื่อสถานที่และอุณหภูมิสำหรับฟิลเตอร์ Instant</strong> — เมื่อท่านใช้ฟิลเตอร์ Instant ในขณะที่อนุญาตให้เข้าถึงตำแหน่งที่ตั้งและเปิด "บันทึกตำแหน่งที่ตั้ง" ไว้ จะมีการค้นหาเพิ่มอีกสองรายการ ซึ่งทั้งสองรายการดำเนินการโดย iOS เอง และเกิดขึ้นเฉพาะระหว่างที่ใช้ฟิลเตอร์นั้นเท่านั้น รายการแรก ตำแหน่งโดยประมาณ — คือพิกัดที่ปัดเป็นตารางกริดขนาด 0.01 องศา หรือราว 1.1&nbsp;km — จะถูกส่งไปยัง<strong>บริการแปลงพิกัดเป็นชื่อสถานที่ (geocoding) ของ Apple</strong> เพื่อรับชื่อสถานที่แบบสั้น ซึ่งจะถูกเขียนด้วยลายมือไว้ที่ขอบของการ์ด Instant ต่างจากการค้นหาในแกลเลอรีข้างต้น คำขอนี้ใช้ภาษาที่แอปแสดงผลอยู่ เพื่อให้ชื่อสถานที่ในต่างประเทศปรากฏเป็นภาษาของท่านเองได้ รายการที่สอง ตำแหน่ง<strong>โดยประมาณ</strong> — คือพิกัดที่ปัดเป็นตารางกริดขนาด 0.1 องศา หรือราว 11 km — จะถูกส่งไปยัง<strong>บริการ WeatherKit ของ Apple</strong> เพื่อรับอุณหภูมิปัจจุบันของพื้นที่นั้น อุณหภูมิที่ได้รับจะไม่ถูกแสดงบนหน้าจอ ไม่ถูกบันทึกลงในรูปภาพ และไม่ถูกจัดเก็บไว้แต่อย่างใด แต่ใช้เป็นค่านำเข้าเพียงหนึ่งค่าสำหรับการแสดงผลสีของฟิลเตอร์เท่านั้น เพื่อให้รูปที่ถ่ายในวันที่อากาศหนาวมีโทนสีเย็นกว่ารูปที่ถ่ายในวันที่อากาศร้อนเล็กน้อย คำขอทั้งสองรายการดำเนินการโดย iOS อยู่ภายใต้<a href="https://www.apple.com/legal/privacy/">นโยบายความเป็นส่วนตัวของ Apple</a> และไม่ถูกส่งมายังข้าพเจ้าเลย — ข้าพเจ้าไม่ได้ให้บริการเซิร์ฟเวอร์ หากท่านปิด "บันทึกตำแหน่งที่ตั้ง" หรือไม่อนุญาตให้เข้าถึงตำแหน่งที่ตั้ง การค้นหาทั้งสองรายการจะไม่เกิดขึ้นเลย ข้อมูลสภาพอากาศให้บริการโดย Weather ทั้งนี้ข้อมูลที่ Apple ให้มาได้รับการปรับแต่งแล้ว</li>
+    <li><strong>การตั้งค่าแอปและดัชนีแกลเลอรี</strong> — การตั้งค่าที่ท่านเลือกไว้ (ฟิลเตอร์ที่เลือก รูปแบบการบันทึก ฯลฯ) และดัชนีของรูปภาพที่บันทึกไว้ จะถูกจัดเก็บไว้บนเครื่องของท่านผ่าน API การจัดเก็บมาตรฐานของ iOS</li>
+    <li><strong>สถานะการซื้อและการทดลองใช้</strong> — สำหรับการทดลองใช้ฟรี 21 วัน และการสมัครสมาชิก/การซื้อแบบถาวร วันที่เริ่มทดลองใช้และสถานะการซื้อจะถูกจัดเก็บไว้เฉพาะบนเครื่องของท่าน (โดยใช้ iOS Keychain และ UserDefaults) ส่วนตัวการชำระเงินนั้น Apple เป็นผู้ดำเนินการ แอปไม่เคยได้รับหรือจัดเก็บข้อมูลบัตรชำระเงินของท่าน สำหรับการตรวจสอบและกู้คืนสิทธิ์การซื้อ แอปใช้บริการ RevenueCat — โปรดดูหัวข้อ "บริการของบุคคลที่สาม" ด้านล่าง</li>
+</ul>
+
+<h2>สิทธิ์การเข้าถึง</h2>
+<ul>
+    <li><strong>กล้อง</strong> (จำเป็น) — เพื่อถ่ายภาพและใช้ฟิลเตอร์แบบเรียลไทม์</li>
+    <li><strong>คลังรูปภาพ</strong> (ไม่บังคับ) — เพื่อบันทึกรูปภาพที่ผ่านฟิลเตอร์ และเพื่อตรวจสอบว่าสำเนาที่แอปเคยบันทึกไว้ยังคงอยู่หรือไม่ ในตอนที่แอปแสดงคำเตือนก่อนลบ แอปขอสิทธิ์อ่าน/เขียนเพื่อวัตถุประสงค์เหล่านี้ โดยส่วนของการอ่านใช้เพียงเพื่อตรวจสอบว่ารูปภาพที่แอปบันทึกไว้เองยังอยู่หรือไม่เท่านั้น ส่วนรูปภาพที่จะนำเข้านั้น ท่านเป็นผู้เลือกเองอย่างชัดเจนผ่านหน้าจอเลือกรูปภาพของระบบ iOS</li>
+    <li><strong>ตำแหน่งที่ตั้งขณะใช้แอป</strong> (ไม่บังคับ) — ใช้เฉพาะเมื่อท่านเปิด "บันทึกตำแหน่งที่ตั้ง" ในการตั้งค่ากล้องของแอปร่วมด้วยเท่านั้น ซึ่งในกรณีนั้นพิกัดที่ได้รับ ณ ขณะถ่ายภาพจะถูกเขียนลงใน EXIF ของรูปภาพ เช่นเดียวกับแอปกล้องในตัวของเครื่อง ส่วนชื่อเมืองที่แสดงในหน้ารายละเอียดของแกลเลอรีนั้นได้มาจากการส่งพิกัด GPS ที่มีอยู่แล้วใน EXIF ของรูปภาพไปยัง Apple จึงอาจปรากฏขึ้นได้แม้ท่านจะไม่เคยให้สิทธิ์นี้เลยก็ตาม (โปรดดูหัวข้อ "ข้อมูลตำแหน่งที่ตั้งในรูปภาพ" ข้างต้น) ท่านสามารถปฏิเสธหรือเพิกถอนสิทธิ์นี้เมื่อใดก็ได้ โดยไม่กระทบต่อฟังก์ชันอื่น ๆ</li>
+</ul>
+
+<h2>บริการของบุคคลที่สาม</h2>
+<p>
+    แอป<strong>ไม่</strong>ใช้บริการโฆษณา บริการรายงานข้อขัดข้อง (crash reporting)
+    หรือบริการติดตามพฤติกรรมใด ๆ และไม่ได้ฝัง SDK สำหรับวิเคราะห์พฤติกรรมไว้ในแอป
+    การใช้ฟิลเตอร์และการประมวลผลภาพทั้งหมดเกิดขึ้นบนเครื่องของท่าน ข้าพเจ้าสามารถดูสถิติ
+    การซื้อในภาพรวมได้ผ่านแดชบอร์ดของ RevenueCat ตามที่อธิบายไว้ด้านล่าง และผ่าน
+    App Store Connect ของ Apple
+</p>
+<p>
+    สำหรับการซื้อนั้น Apple เป็นผู้ดำเนินการชำระเงินเอง และมีบริษัทบุคคลที่สาม
+    <strong>เพียงหนึ่งราย</strong> คือ RevenueCat ที่ทำหน้าที่ตรวจสอบและกู้คืนสิทธิ์การใช้งาน
+    ของท่านแทนข้าพเจ้า นอกจากนี้ iOS ยังส่งพิกัดของรูปภาพไปยัง Apple เมื่อมีการแสดงชื่อเมือง และ —
+    ระหว่างที่ใช้ฟิลเตอร์ Instant โดยเปิด "บันทึกตำแหน่งที่ตั้ง" ไว้ — เพื่อรับชื่อสถานที่และ
+    อุณหภูมิปัจจุบันของพื้นที่โดยประมาณนั้น ทั้งหมดนี้อธิบายไว้ด้านล่าง
+</p>
+<ul>
+    <li><strong>RevenueCat, Inc. (สหรัฐอเมริกา) — การจัดการการซื้อและการสมัครสมาชิก
+        และสถิติการซื้อ</strong>
+        เพื่อตรวจสอบและกู้คืนสิทธิ์การสมัครสมาชิกหรือการซื้อแบบถาวรของท่าน แอปจะสื่อสารกับ
+        เซิร์ฟเวอร์ของ RevenueCat (รวมถึงในตอนที่เปิดแอปด้วย)
+        ข้อมูลที่ส่งออกไป หรือที่ RevenueCat ได้รับจากการสื่อสารดังกล่าว ได้แก่
+        รหัสผู้ใช้แอปที่ RevenueCat สร้างขึ้นแบบสุ่ม (แอปไม่เคยเชื่อมโยงรหัสนี้กับชื่อหรือ
+        ที่อยู่อีเมลใด ๆ) ข้อมูลธุรกรรมการซื้อและการสมัครสมาชิก
+        ข้อมูลพื้นฐานเกี่ยวกับเครื่องและแอป (รุ่นของเครื่อง เวอร์ชันของระบบปฏิบัติการและของแอป
+        bundle ID ของแอป การตั้งค่าภาษา ประเทศของสโตร์ และตัวระบุผู้จำหน่าย IDFV)
+        และที่อยู่ IP ของท่าน
+        ส่วนข้อมูลที่แอป<em>ไม่</em>ส่งให้ RevenueCat ในการสื่อสารนี้ ได้แก่ ชื่อของท่าน
+        ที่อยู่อีเมล รายละเอียดบัตรชำระเงิน รูปภาพของท่าน พิกัด GPS ในรูปภาพของท่าน
+        และตัวระบุเพื่อการโฆษณา (IDFA)
+        ข้อมูลดังกล่าวจะถูกโอนไปยังและประมวลผลใน<strong>สหรัฐอเมริกา</strong> และเก็บรักษาไว้ตาม
+        <a href="https://www.revenuecat.com/privacy">นโยบายความเป็นส่วนตัวของ RevenueCat</a></li>
+    <li><strong>Apple Inc. (สหรัฐอเมริกา) — การค้นหาชื่อเมือง</strong>
+        เมื่อท่านเปิดหน้ารายละเอียดของรูปภาพที่มีพิกัด GPS ในแกลเลอรีของแอป iOS จะส่งพิกัด
+        ดังกล่าวไปยัง Apple เพื่อให้แสดงชื่อเมืองได้
+        ข้อมูลที่แอปส่งต่อไปเพื่อการนี้ ได้แก่ พิกัด GPS ที่จัดเก็บอยู่ในรูปภาพนั้น พร้อมกับ
+        โลแคลภาษาอังกฤษแบบตายตัว (en_US) ซึ่งกำหนดภาษาของชื่อเมืองที่จะได้รับกลับมา
+        แอปไม่ได้ส่งรูปภาพของท่าน ตัวระบุตัวตนใด ๆ ของท่าน หรือข้อมูลการซื้อใด ๆ
+        ไปเพื่อวัตถุประสงค์นี้ อย่างไรก็ตาม ตัวคำขอนั้นดำเนินการโดยเฟรมเวิร์ก Core Location
+        ของ iOS ดังนั้นสิ่งที่ Apple ได้รับเพิ่มเติมจากคำขอผ่านเครือข่ายดังกล่าว
+        (เช่น ที่อยู่ IP ของท่าน) จึงอยู่ภายใต้การจัดการตาม
+        <a href="https://www.apple.com/legal/privacy/">นโยบายความเป็นส่วนตัวของ Apple</a>
+        ไม่มีสวิตช์แยกต่างหากสำหรับปิดเฉพาะการค้นหานี้ หากท่านต้องการหลีกเลี่ยง
+        โปรดอย่าเปิดหน้ารายละเอียดในแกลเลอรีของรูปภาพที่มีพิกัด GPS การปิด
+        "บันทึกตำแหน่งที่ตั้ง" จะทำให้รูปภาพที่ถ่ายด้วย vismo ต่อจากนี้ไม่บันทึกพิกัดอีก
+        แต่ไม่มีผลต่อรูปภาพที่มีพิกัดอยู่แล้ว รวมถึงรูปภาพที่นำเข้ามาด้วย</li>
+    <li><strong>Apple Inc. (สหรัฐอเมริกา) — ชื่อสถานที่และอุณหภูมิสำหรับฟิลเตอร์ Instant</strong>
+        ระหว่างที่ท่านใช้ฟิลเตอร์ Instant โดยอนุญาตให้เข้าถึงตำแหน่งที่ตั้งและเปิด
+        "บันทึกตำแหน่งที่ตั้ง" ไว้ iOS จะส่งพิกัดไปยัง Apple สองครั้ง ได้แก่ ส่งไปยังบริการแปลงพิกัด
+        เป็นชื่อสถานที่ (geocoding) เพื่อรับชื่อสถานที่แบบสั้น และส่งไปยังบริการ WeatherKit
+        เพื่อรับอุณหภูมิปัจจุบันของพื้นที่นั้น
+        ข้อมูลที่แอปส่งต่อไปเพื่อการนี้ ได้แก่ สำหรับชื่อสถานที่ คือพิกัดที่ปัดเป็นตารางกริดขนาด
+        0.01 องศา (ราว 1.1&nbsp;km) พร้อมกับภาษาที่แอปแสดงผลอยู่ ส่วนสำหรับอุณหภูมิ คือพิกัดที่ปัดเป็น
+        <strong>ตารางกริดขนาด 0.1 องศา (ราว 11 km)</strong>
+        แอปไม่ได้ส่งรูปภาพของท่าน ตัวระบุตัวตนใด ๆ ของท่าน หรือข้อมูลการซื้อใด ๆ
+        ไปเพื่อวัตถุประสงค์นี้ คำขอทั้งสองรายการดำเนินการโดยเฟรมเวิร์กของ iOS ดังนั้นสิ่งที่ Apple
+        ได้รับเพิ่มเติมจากคำขอผ่านเครือข่ายดังกล่าว (เช่น ที่อยู่ IP ของท่าน) จึงอยู่ภายใต้การจัดการตาม
+        <a href="https://www.apple.com/legal/privacy/">นโยบายความเป็นส่วนตัวของ Apple</a>
+        ต่างจากการค้นหาชื่อเมืองข้างต้น การค้นหาสองรายการนี้จะหยุดลงโดยสิ้นเชิงเมื่อท่านปิด
+        "บันทึกตำแหน่งที่ตั้ง" หรือไม่อนุญาตให้เข้าถึงตำแหน่งที่ตั้ง ในกรณีนั้นพิกัดจะไม่ออกจากเครื่อง
+        เพื่อฟิลเตอร์ Instant เลย
+        ข้อมูลสภาพอากาศให้บริการโดย <strong>Weather</strong> ทั้งนี้ข้อมูลที่ Apple ให้มาได้รับการปรับแต่งแล้ว</li>
+</ul>
+<p>
+    นอกเหนือจากรูปภาพที่ท่านบันทึกหรือแชร์ด้วยตนเองแล้ว ข้อมูลเดียวที่แอปส่งออกไปยังบริการภายนอก
+    คือการสื่อสารที่เกี่ยวข้องกับการซื้อตามที่อธิบายไว้ข้างต้น และพิกัดที่ส่งไปยัง Apple เพื่อแสดง
+    ชื่อเมือง เพื่อรับชื่อสถานที่สำหรับฟิลเตอร์ Instant และ — โดยปัดเป็นตารางกริดขนาดราว 11 km —
+    เพื่อรับอุณหภูมิปัจจุบันของพื้นที่นั้น ข้าพเจ้า<strong>ไม่</strong>ขายข้อมูลส่วนบุคคลของท่าน
+    และไม่แบ่งปันข้อมูลดังกล่าวเพื่อการโฆษณาเชิงพฤติกรรมข้ามบริบท
+</p>
+
+<h2>การจัดเก็บและการลบข้อมูล</h2>
+<p>
+    ข้อมูลอื่น ๆ ทั้งหมด (รูปภาพ ดัชนีแกลเลอรี การตั้งค่า สถานะการทดลองใช้) จัดเก็บไว้เฉพาะบน
+    เครื่องของท่านเท่านั้น เมื่อท่านลบแอป iOS จะลบข้อมูลที่จัดเก็บไว้ในเครื่องทั้งหมดไปด้วย
+    ทั้งนี้รายการใน Keychain ที่เก็บสถานะการทดลองใช้ (เช่น วันที่เริ่มทดลองใช้) อาจยังคงอยู่ในเครื่อง
+    เพื่อไม่ให้การติดตั้งใหม่บนเครื่องเดิมทำให้ระยะเวลาทดลองใช้เริ่มนับใหม่
+    รูปภาพที่ท่านบันทึกไว้ในคลังรูปภาพจะยังคงอยู่ในคลังรูปภาพของท่านและอยู่ภายใต้การจัดการของ iOS
+    ส่วนบันทึกการซื้อที่ Apple และ RevenueCat เก็บรักษาไว้นั้นอยู่ภายใต้นโยบายของแต่ละบริษัท
+    ท่านสามารถขอให้ลบข้อมูลที่ RevenueCat เก็บรักษาไว้ได้ทางอีเมลติดต่อด้านล่าง
+</p>
+
+<h2>มาตรการรักษาความปลอดภัย</h2>
+<p>
+    รูปภาพจะอยู่ในพื้นที่จัดเก็บของแอปเอง เว้นแต่ท่านจะบันทึกลงในคลังรูปภาพหรือแชร์ออกไป
+    เมื่อบันทึกแล้ว iOS จะเป็นผู้จัดการรูปภาพเหล่านั้น และการที่รูปภาพจะออกจากเครื่องหรือไม่
+    ขึ้นอยู่กับการตั้งค่า iCloud Photos ของท่าน ข้อมูลตำแหน่งที่ตั้งจะออกจากเครื่องของท่านในสองกรณี
+    ซึ่งทั้งสองกรณีได้อธิบายไว้ข้างต้นแล้ว ได้แก่ ตอนที่ท่านเปิดหน้ารายละเอียดในแกลเลอรีของ
+    รูปภาพที่มีพิกัด GPS และจำเป็นต้องดึงชื่อเมืองมาแสดง และตอนที่ท่านกำลังใช้ฟิลเตอร์ Instant
+    โดยเปิด "บันทึกตำแหน่งที่ตั้ง" ไว้ ซึ่งมีการดึงชื่อสถานที่และอุณหภูมิของพื้นที่โดยประมาณนั้นมา หากท่านแชร์รูปภาพที่มีพิกัด GPS อยู่ใน EXIF พิกัดดังกล่าวจะติดไปกับ
+    รูปภาพนั้นไปยังปลายทางที่ท่านส่งไปด้วย
+    การสื่อสารกับ RevenueCat มีการเข้ารหัสระหว่างการรับส่งข้อมูล (HTTPS)
+</p>
+
+<h2>ความเป็นส่วนตัวของเด็ก</h2>
+<p>
+    แอปไม่เก็บรวบรวมข้อมูลใด ๆ จากเด็กที่มีอายุต่ำกว่า 13 ปีโดยเจตนา
+</p>
+
+<h2>การเปลี่ยนแปลงนโยบายฉบับนี้</h2>
+<p>
+    นโยบายความเป็นส่วนตัวฉบับนี้อาจมีการปรับปรุงเป็นครั้งคราว การเปลี่ยนแปลงใด ๆ
+    จะสะท้อนอยู่ในหน้านี้ พร้อมกับปรับวันที่ "อัปเดตล่าสุด" ให้เป็นปัจจุบัน
+</p>
+
+<h2>ติดต่อ</h2>
+<p>
+    หากท่านมีคำถามเกี่ยวกับนโยบายความเป็นส่วนตัวฉบับนี้ โปรดติดต่อ:<br>
+    <a href="mailto:vismo.support@gmail.com">vismo.support@gmail.com</a>
+</p>
+<p><a href="support/">ฝ่ายสนับสนุน vismo</a></p>
+</section>
+
+    <!-- ===== Bahasa Indonesia ===== -->
+<section id="id">
+    <h1>Kebijakan Privasi</h1>
+    <p class="meta">vismo &nbsp;·&nbsp; Terakhir diperbarui: 26 Agustus 2026</p>
+
+    <p>
+        vismo ("Aplikasi") dikembangkan dan dikelola oleh Hyunjin Cho ("saya").
+        Kebijakan Privasi ini menjelaskan informasi apa saja yang dikumpulkan oleh Aplikasi dan bagaimana informasi tersebut digunakan.
+    </p>
+
+    <h2>Pengumpulan Informasi</h2>
+    <p>
+        vismo adalah aplikasi kamera dan filter foto. Aplikasi menangani informasi berikut.
+        Aplikasi — atau iOS yang bertindak atas namanya — mengirimkan informasi ke layanan
+        pihak luar dalam hal-hal berikut: pengelolaan pembelian dan langganan (Apple memproses
+        pembayaran; RevenueCat memverifikasi dan memulihkan hak akses Anda serta menghimpun
+        statistik pembelian), pencarian nama kota yang dijelaskan pada bagian "Data lokasi
+        dalam foto", serta pencarian nama tempat dan suhu yang dijelaskan pada bagian "Nama
+        tempat dan suhu untuk filter Instant". Setiap pencarian lokasi tersebut dilakukan oleh
+        iOS dan ditujukan kepada Apple; tidak satu pun di antaranya sampai kepada saya.
+        Terpisah dari itu, foto yang Anda simpan ke Perpustakaan Foto keluar dari
+        ruang penyimpanan Aplikasi sendiri dan dikelola oleh iOS; apakah foto tersebut kemudian
+        keluar dari perangkat bergantung pada pengaturan Foto iCloud Anda, dan foto yang Anda
+        bagikan akan menuju ke mana pun Anda memilih untuk mengirimkannya.
+    </p>
+    <ul>
+        <li><strong>Foto yang Anda ambil atau impor</strong> — disimpan dalam galeri Aplikasi di perangkat Anda, dan (dengan izin Anda) disimpan pula ke Perpustakaan Foto.</li>
+        <li><strong>Data lokasi dalam foto</strong> — jika Anda memberikan izin lokasi dan mengaktifkan "Simpan Lokasi" pada pengaturan kamera Aplikasi, koordinat GPS yang tersedia pada saat pengambilan gambar disematkan ke dalam metadata EXIF foto yang Anda ambil, sama seperti yang dilakukan aplikasi Kamera bawaan. Saya tidak mengoperasikan server apa pun, sehingga data lokasi tidak pernah dikirimkan kepada saya. Ada satu pengecualian, dan pengecualian itu tidak terbatas pada foto yang Anda ambil dengan vismo: setiap kali Anda membuka sebuah foto pada tampilan detail galeri Aplikasi dan foto tersebut memuat koordinat GPS pada EXIF-nya — baik foto itu diambil dengan vismo maupun diimpor dari perpustakaan Anda dengan metadata aslinya masih utuh — koordinat tersebut dikirimkan ke <strong>layanan geocoding Apple</strong> agar nama kota dapat ditampilkan. Pencarian ini dilakukan oleh iOS sendiri (framework Core Location), dan penanganan permintaan tersebut oleh Apple tunduk pada <a href="https://www.apple.com/legal/privacy/">Kebijakan Privasi Apple</a>. vismo tidak menyimpan hasilnya di mana pun di luar perangkat Anda — saya tidak mengoperasikan server.</li>
+        <li><strong>Nama tempat dan suhu untuk filter Instant</strong> — ketika Anda menggunakan filter Instant dengan izin lokasi yang telah diberikan dan "Simpan Lokasi" dalam keadaan aktif, dua pencarian tambahan dilakukan, keduanya oleh iOS sendiri dan keduanya hanya berlangsung selama filter tersebut digunakan. Pertama, posisi perkiraan — koordinat yang dibulatkan ke kisi 0,01 derajat, kira-kira 1,1&nbsp;km — dikirimkan ke <strong>layanan geocoding Apple</strong> untuk memperoleh nama tempat yang singkat, yang dituliskan dengan gaya tulisan tangan pada tepi kartu Instant; berbeda dengan pencarian di galeri di atas, permintaan yang satu ini diajukan dalam bahasa tampilan Aplikasi, sehingga sebuah tempat di luar negeri dapat muncul dalam bahasa Anda sendiri. Kedua, posisi <strong>perkiraan</strong> — koordinat yang dibulatkan ke kisi 0,1 derajat, kira-kira 11 km — dikirimkan ke <strong>layanan WeatherKit Apple</strong> untuk memperoleh suhu terkini di area tersebut. Suhu itu tidak pernah ditampilkan, tidak pernah dituliskan ke dalam foto, dan tidak pernah disimpan: suhu hanya digunakan sebagai salah satu masukan bagi pengolahan warna filter, sehingga foto yang diambil dalam cuaca dingin ditampilkan dengan warna yang sedikit lebih dingin dibandingkan foto yang diambil dalam cuaca panas. Kedua permintaan tersebut dilakukan oleh iOS, tunduk pada <a href="https://www.apple.com/legal/privacy/">Kebijakan Privasi Apple</a>, dan tidak pernah dikirimkan kepada saya — saya tidak mengoperasikan server. Jika Anda menonaktifkan "Simpan Lokasi", atau menolak izin lokasi, kedua pencarian tersebut sama sekali tidak terjadi. Data cuaca disediakan oleh Weather; data yang disediakan oleh Apple telah dimodifikasi.</li>
+        <li><strong>Pengaturan aplikasi dan indeks galeri</strong> — preferensi Anda (filter yang dipilih, format penyimpanan, dan sebagainya) serta indeks foto yang tersimpan disimpan di perangkat Anda menggunakan API penyimpanan standar iOS.</li>
+        <li><strong>Status pembelian dan uji coba</strong> — untuk uji coba gratis selama 21 hari serta pembelian langganan atau seumur hidup, tanggal mulai uji coba dan status pembelian disimpan secara lokal di perangkat Anda (menggunakan iOS Keychain dan UserDefaults). Pembayaran itu sendiri ditangani oleh Apple; Aplikasi tidak pernah menerima atau menyimpan informasi kartu pembayaran Anda. Untuk memverifikasi dan memulihkan hak akses pembelian Anda, Aplikasi menggunakan RevenueCat — lihat "Layanan Pihak Ketiga" di bawah ini.</li>
+    </ul>
+
+    <h2>Izin</h2>
+    <ul>
+        <li><strong>Kamera</strong> (wajib) — untuk mengambil foto dan menerapkan filter secara real-time.</li>
+        <li><strong>Perpustakaan Foto</strong> (opsional) — untuk menyimpan foto yang telah difilter dan, ketika Aplikasi menampilkan peringatan penghapusan, memeriksa apakah salinan yang sebelumnya disimpan oleh Aplikasi masih ada. Aplikasi meminta akses baca/tulis untuk keperluan tersebut; sisi baca hanya digunakan untuk memeriksa apakah foto yang disimpan oleh Aplikasi sendiri masih ada di sana. Foto yang akan diimpor dipilih secara eksplisit melalui pemilih sistem iOS.</li>
+        <li><strong>Lokasi Saat Digunakan</strong> (opsional) — digunakan hanya jika Anda juga mengaktifkan "Simpan Lokasi" pada pengaturan kamera Aplikasi; dalam hal itu, koordinat yang tersedia pada saat pengambilan gambar dituliskan ke dalam EXIF foto, seperti aplikasi Kamera bawaan. Nama kota yang ditampilkan pada tampilan detail galeri diperoleh dengan mengirimkan koordinat GPS yang sudah tersimpan dalam EXIF sebuah foto kepada Apple, sehingga nama kota tetap dapat muncul meskipun Anda tidak pernah memberikan izin ini (lihat "Data lokasi dalam foto" di atas). Anda dapat menolak atau mencabut izin ini kapan saja tanpa memengaruhi fungsi lainnya.</li>
+    </ul>
+
+    <h2>Layanan Pihak Ketiga</h2>
+    <p>
+        Aplikasi <strong>tidak</strong> menggunakan layanan periklanan, pelaporan kerusakan,
+        maupun pelacakan apa pun, dan tidak menyertakan SDK analitik perilaku. Seluruh
+        pemfilteran dan pemrosesan gambar berlangsung di perangkat Anda. Saya dapat melihat
+        statistik pembelian agregat melalui dasbor RevenueCat yang dijelaskan di bawah ini dan
+        melalui App Store Connect milik Apple.
+    </p>
+    <p>
+        Untuk pembelian, Apple sendiri yang memproses pembayaran, dan <strong>satu</strong>
+        perusahaan pihak ketiga — RevenueCat — memverifikasi serta memulihkan hak akses Anda
+        atas nama saya. Terpisah dari itu, iOS mengirimkan koordinat foto kepada Apple ketika
+        nama kota ditampilkan, dan — selama filter Instant digunakan dengan "Simpan Lokasi"
+        dalam keadaan aktif — untuk memperoleh nama tempat serta suhu terkini di area perkiraan
+        tersebut. Semuanya dijelaskan di bawah ini.
+    </p>
+    <ul>
+        <li><strong>RevenueCat, Inc. (Amerika Serikat) — pengelolaan pembelian dan langganan,
+            serta statistik pembelian.</strong>
+            Untuk memverifikasi dan memulihkan langganan atau pembelian seumur hidup Anda,
+            Aplikasi berkomunikasi dengan server RevenueCat (termasuk pada saat Aplikasi dijalankan).
+            Yang dikirimkan, atau yang diperoleh RevenueCat sebagai bagian dari komunikasi tersebut:
+            ID pengguna aplikasi yang dibuat secara acak oleh RevenueCat (Aplikasi tidak pernah
+            mengaitkannya dengan nama atau alamat email), informasi transaksi pembelian dan langganan,
+            informasi dasar perangkat dan aplikasi (model perangkat, versi OS dan aplikasi, bundle ID
+            aplikasi, pengaturan bahasa, negara toko, dan pengidentifikasi vendor IDFV), serta alamat IP Anda.
+            Yang <em>tidak</em> dikirimkan Aplikasi kepada RevenueCat dalam komunikasi ini: nama Anda,
+            alamat email, rincian kartu pembayaran, foto Anda, koordinat GPS dalam foto Anda,
+            atau pengidentifikasi iklan (IDFA).
+            Data ini ditransfer ke dan diproses di <strong>Amerika Serikat</strong> serta
+            disimpan sesuai dengan
+            <a href="https://www.revenuecat.com/privacy">Kebijakan Privasi RevenueCat</a>.</li>
+        <li><strong>Apple Inc. (Amerika Serikat) — pencarian nama kota.</strong>
+            Ketika Anda membuka foto yang memuat koordinat GPS pada tampilan detail galeri Aplikasi,
+            iOS mengirimkan koordinat tersebut kepada Apple agar nama kota dapat ditampilkan.
+            Yang diteruskan Aplikasi untuk keperluan ini: koordinat GPS yang tersimpan dalam foto
+            tersebut, bersama dengan locale bahasa Inggris tetap (en_US) yang mengunci bahasa nama
+            kota yang dikembalikan. Aplikasi tidak meneruskan foto Anda, pengidentifikasi apa pun
+            milik Anda, ataupun informasi pembelian apa pun untuk keperluan ini. Permintaan itu
+            sendiri dilakukan oleh framework Core Location milik iOS, sehingga segala sesuatu yang
+            diterima Apple sebagai bagian dari permintaan jaringan tersebut (alamat IP Anda, misalnya)
+            ditangani berdasarkan
+            <a href="https://www.apple.com/legal/privacy/">Kebijakan Privasi Apple</a>.
+            Tidak ada sakelar terpisah yang menonaktifkan hanya pencarian ini: untuk menghindarinya,
+            jangan membuka tampilan detail galeri dari foto yang memuat koordinat GPS. Menonaktifkan
+            "Simpan Lokasi" menghentikan perekaman koordinat pada foto baru yang diambil dengan vismo,
+            tetapi tidak mengubah foto yang sudah memuat koordinat, termasuk foto yang diimpor.</li>
+        <li><strong>Apple Inc. (Amerika Serikat) — nama tempat dan suhu untuk filter Instant.</strong>
+            Selama Anda menggunakan filter Instant dengan izin lokasi yang telah diberikan dan
+            "Simpan Lokasi" dalam keadaan aktif, iOS mengirimkan koordinat kepada Apple sebanyak
+            dua kali: ke layanan geocoding-nya untuk memperoleh nama tempat yang singkat, dan ke
+            layanan WeatherKit-nya untuk memperoleh suhu terkini di area tersebut.
+            Yang diteruskan Aplikasi untuk keperluan ini: untuk nama tempat, koordinat yang
+            dibulatkan ke kisi 0,01 derajat (kira-kira 1,1&nbsp;km) beserta bahasa tampilan Aplikasi;
+            untuk suhu, koordinat yang dibulatkan ke <strong>kisi 0,1 derajat (kira-kira 11 km)</strong>.
+            Aplikasi tidak meneruskan foto Anda, pengidentifikasi apa pun milik Anda, ataupun
+            informasi pembelian apa pun untuk keperluan ini. Kedua permintaan tersebut dilakukan
+            oleh framework iOS, sehingga segala sesuatu yang diterima Apple sebagai bagian dari
+            permintaan jaringan tersebut (alamat IP Anda, misalnya) ditangani berdasarkan
+            <a href="https://www.apple.com/legal/privacy/">Kebijakan Privasi Apple</a>.
+            Berbeda dengan pencarian nama kota di atas, kedua pencarian ini berhenti sepenuhnya
+            ketika Anda menonaktifkan "Simpan Lokasi" atau menolak izin lokasi — dalam hal itu
+            koordinat tidak pernah keluar dari perangkat untuk filter Instant.
+            Data cuaca disediakan oleh <strong>Weather</strong>; data yang disediakan oleh Apple telah dimodifikasi.</li>
+    </ul>
+    <p>
+        Selain foto yang Anda simpan atau bagikan sendiri, satu-satunya data yang dikirimkan
+        Aplikasi ke layanan pihak luar adalah komunikasi terkait pembelian yang dijelaskan di atas
+        dan koordinat yang dikirimkan kepada Apple untuk menampilkan nama kota, untuk memperoleh
+        nama tempat bagi filter Instant, dan — setelah dibulatkan ke kisi kira-kira 11 km — untuk
+        memperoleh suhu terkini di area tersebut. Saya <strong>tidak</strong> menjual data pribadi Anda,
+        ataupun membagikannya untuk keperluan iklan perilaku lintas konteks.
+    </p>
+
+    <h2>Penyimpanan dan Penghapusan Data</h2>
+    <p>
+        Seluruh data lainnya (foto, indeks galeri, pengaturan, status uji coba) disimpan secara
+        lokal di perangkat Anda. Ketika Anda menghapus Aplikasi, iOS menghapus semua data yang
+        tersimpan secara lokal; item Keychain yang menyimpan status uji coba (seperti tanggal
+        mulai uji coba) dapat tetap berada di perangkat agar pemasangan ulang pada perangkat yang
+        sama tidak memulai kembali masa uji coba.
+        Foto yang telah Anda simpan ke Perpustakaan Foto tetap berada di Perpustakaan Foto Anda
+        dan dikelola oleh iOS. Catatan pembelian yang disimpan oleh Apple dan RevenueCat dikelola
+        berdasarkan kebijakan masing-masing; Anda dapat meminta penghapusan data yang disimpan
+        RevenueCat melalui alamat email kontak di bawah ini.
+    </p>
+
+    <h2>Keamanan</h2>
+    <p>
+        Foto tetap berada di ruang penyimpanan Aplikasi sendiri kecuali Anda menyimpannya ke
+        Perpustakaan Foto atau membagikannya; setelah disimpan, iOS yang mengelolanya, dan apakah
+        foto tersebut keluar dari perangkat bergantung pada pengaturan Foto iCloud Anda. Data
+        lokasi keluar dari perangkat Anda dalam dua situasi, keduanya telah dijelaskan di atas:
+        ketika Anda membuka tampilan detail galeri dari sebuah foto yang memuat koordinat GPS dan
+        nama kota harus diambil, dan ketika Anda sedang menggunakan filter Instant dengan
+        "Simpan Lokasi" dalam keadaan aktif, saat nama tempat dan suhu area perkiraan diambil.
+        Jika Anda membagikan foto yang EXIF-nya memuat koordinat GPS, koordinat tersebut ikut
+        berpindah bersama foto ke mana pun Anda mengirimkannya.
+        Komunikasi dengan RevenueCat dienkripsi selama transmisi (HTTPS).
+    </p>
+
+    <h2>Privasi Anak</h2>
+    <p>
+        Aplikasi tidak dengan sengaja mengumpulkan informasi apa pun dari anak-anak di bawah usia 13 tahun.
+    </p>
+
+    <h2>Perubahan Kebijakan Ini</h2>
+    <p>
+        Kebijakan Privasi ini dapat diperbarui dari waktu ke waktu. Setiap perubahan akan
+        tercermin pada halaman ini disertai tanggal "Terakhir diperbarui" yang telah direvisi.
+    </p>
+
+    <h2>Kontak</h2>
+    <p>
+        Jika Anda memiliki pertanyaan mengenai Kebijakan Privasi ini, silakan hubungi:<br>
+        <a href="mailto:vismo.support@gmail.com">vismo.support@gmail.com</a>
+    </p>
+    <p><a href="support/">Dukungan vismo</a></p>
     </section>
 
 </body>
