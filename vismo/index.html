@@ -49,7 +49,7 @@
     <!-- ===== English ===== -->
     <section id="en">
     <h1>Privacy Policy</h1>
-    <p class="meta">vismo &nbsp;·&nbsp; Last updated: August 26, 2026</p>
+    <p class="meta">vismo &nbsp;·&nbsp; Last updated: August 30, 2026</p>
 
     <p>
         vismo ("the App") is developed and maintained by Hyunjin Cho ("I", "me", or "my").
@@ -76,7 +76,8 @@
         <li><strong>Place name and temperature for the Instant filter</strong> — when you use the Instant filter with location permission granted and "Save location" turned on, two further lookups are made, both by iOS itself and both only while that filter is in use. First, an approximate position — the coordinates rounded to a 0.01-degree grid, roughly 1.1&nbsp;km — is sent to <strong>Apple's geocoding service</strong> to obtain a short place name, which is handwritten in the margin of the Instant card; unlike the gallery lookup above, this one is requested in the App's display language, so that a place abroad can appear in your own language. Second, an <strong>approximate</strong> position — the coordinates rounded to a 0.1-degree grid, roughly 11 km — is sent to <strong>Apple's WeatherKit service</strong> to obtain the current temperature for that area. The temperature is never displayed, never written into the photo, and never stored: it is used only as one input to the filter's colour rendering, so that a photo taken in the cold renders slightly cooler than one taken in the heat. Both requests are made by iOS, are governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>, and are never sent to me — I do not operate a server. If you turn off "Save location", or decline location permission, neither lookup happens at all. Weather data provided by Weather; the data provided by Apple has been modified.</li>
         <li><strong>App settings and gallery index</strong> — your preferences (selected filter, save format, etc.) and an index of saved photos are stored on your device using standard iOS storage APIs.</li>
         <li><strong>Purchase and trial status</strong> — for the 21-day free trial and subscription/lifetime purchase, the trial start date and purchase status are stored locally on your device (using iOS Keychain and UserDefaults). Payment itself is handled by Apple; the App never receives or stores your payment card information. To verify and restore your purchase entitlement, the App uses RevenueCat — see "Third-Party Services" below.</li>
-    </ul>
+        <li><strong>Camera orientation diagnostics</strong> — to verify that photos are saved the right way up, the device tilt reading at the moment of capture and the resulting orientation decision are written to a log on your device, capped at 128 KB. It contains no location data, photo content or identifying information, is never transmitted off your device, and is excluded from device backups.</li>
+</ul>
 
     <h2>Permissions</h2>
     <ul>
@@ -242,7 +243,7 @@
     <!-- ===== 한국어 ===== -->
     <section id="ko">
     <h1>개인정보 처리방침</h1>
-    <p class="meta">vismo &nbsp;·&nbsp; 마지막 업데이트: 2026년 8월 26일</p>
+    <p class="meta">vismo &nbsp;·&nbsp; 마지막 업데이트: 2026년 8월 30일</p>
 
     <p>
         vismo(이하 "앱")는 Hyunjin Cho(이하 "개발자")가 개발·운영합니다.
@@ -266,7 +267,8 @@
         <li><strong>Instant 필터의 지명·기온</strong> — 위치 권한을 허용하고 "위치 저장"을 켠 상태에서 Instant 필터를 사용하면, 두 가지 조회가 추가로 이루어집니다. 둘 다 iOS가 직접 수행하며, 그 필터를 사용하는 동안에만 일어납니다. 첫째, <strong>대략적인 위치</strong> — 좌표를 0.01도 격자(약 1.1km)로 반올림한 값 — 가 <strong>Apple 지오코딩 서비스</strong>로 전송되어 짧은 지명을 받아오고, 이 지명은 Instant 카드 여백에 손글씨로 적힙니다. 위 갤러리 조회와 달리 이 요청은 <strong>앱의 표시 언어</strong>로 이루어지며, 그래서 해외에서 찍은 사진의 지명도 사용자의 언어로 표시될 수 있습니다. 둘째, <strong>대략적인 위치</strong> — 좌표를 0.1도 격자(약 11km)로 반올림한 값 — 가 <strong>Apple WeatherKit 서비스</strong>로 전송되어 그 지역의 현재 기온을 받아옵니다. 받아온 기온은 화면에 표시되지도, 사진에 기록되지도, 저장되지도 않습니다. 오직 필터의 색 표현을 정하는 입력값 하나로만 쓰여, 추운 날 찍은 사진이 더운 날 찍은 사진보다 약간 차갑게 표현되도록 합니다. 두 요청 모두 iOS가 수행하고 <a href="https://www.apple.com/legal/privacy/">Apple 개인정보처리방침</a>이 적용되며, 개발자에게는 전송되지 않습니다 — 개발자는 서버를 운영하지 않습니다. "위치 저장"을 끄거나 위치 권한을 허용하지 않으면 두 조회 모두 아예 이루어지지 않습니다. 날씨 데이터 출처: Weather (Apple이 제공한 데이터를 가공하여 사용합니다).</li>
         <li><strong>앱 설정 및 갤러리 인덱스</strong> — 선택한 필터, 저장 포맷 등 환경 설정과 저장된 사진의 인덱스가 iOS 표준 저장 API를 통해 기기에 보관됩니다.</li>
         <li><strong>결제 및 트라이얼 상태</strong> — 21일 무료 체험 및 구독(월/연) 또는 평생 구매를 위해 트라이얼 시작일과 구매 상태가 기기 내(iOS Keychain 및 UserDefaults)에 저장됩니다. 실제 결제는 Apple이 직접 처리하며, 앱은 결제 카드 정보를 받지도, 저장하지도 않습니다. 구매 권한의 확인·복원에는 RevenueCat을 사용합니다 — 아래 "제3자 서비스" 참조.</li>
-    </ul>
+        <li><strong>카메라 방향 진단 기록</strong> — 사진이 올바른 방향으로 저장되는지 확인하기 위해, 셔터를 누른 시점의 기기 기울기 값과 방향 판정 결과가 기기 내에 최대 128KB까지 기록됩니다. 위치 정보·사진 내용·개인을 식별하는 정보는 포함되지 않으며, 기기 밖으로 전송되지 않고 기기 백업에도 포함되지 않습니다.</li>
+</ul>
 
     <h2>권한</h2>
     <ul>
@@ -454,7 +456,7 @@
     <!-- ===== 日本語 ===== -->
     <section id="ja">
     <h1>プライバシーポリシー</h1>
-    <p class="meta">vismo &nbsp;·&nbsp; 最終更新日: 2026年8月26日</p>
+    <p class="meta">vismo &nbsp;·&nbsp; 最終更新日: 2026年8月30日</p>
 
     <p>
         vismo（以下「本アプリ」）は Hyunjin Cho（以下「開発者」）が開発・運営しています。
@@ -479,7 +481,8 @@
         <li><strong>Instantフィルターの地名・気温</strong> — 位置情報へのアクセスを許可し「位置情報を保存」をオンにした状態でInstantフィルターを使用すると、さらに2つの照会が行われます。いずれもiOS自体が実行し、そのフィルターの使用中にのみ発生します。第一に、<strong>おおよその位置</strong>（座標を0.01度グリッド、約1.1kmに丸めた値）が<strong>Appleの逆ジオコーディング</strong>へ送信され、短い地名を取得します。この地名はInstantカードの余白に手書き風で記されます。上記のギャラリーでの照会とは異なり、この要求は<strong>アプリの表示言語</strong>で行われるため、海外で撮影した写真の地名もお客様の言語で表示されることがあります。第二に、<strong>おおよその位置</strong>（座標を0.1度グリッド、約11kmに丸めた値）が<strong>AppleのWeatherKitサービス</strong>へ送信され、その地域の現在の気温を取得します。取得した気温は画面に表示されることも、写真に記録されることも、保存されることもありません。フィルターの色表現を決める入力値の一つとしてのみ使用され、寒い日に撮影した写真が暑い日の写真よりわずかに冷たく表現されるようにします。いずれの要求もiOSが実行し、<a href="https://www.apple.com/legal/privacy/">Appleのプライバシーポリシー</a>が適用され、開発者へ送信されることはありません（開発者はサーバーを運用していないためです）。「位置情報を保存」をオフにするか、位置情報へのアクセスを許可しない場合、いずれの照会も一切行われません。気象データ提供：Weather（Appleが提供したデータを加工して使用しています）。</li>
         <li><strong>アプリ設定およびギャラリーの管理情報</strong> — 選択したフィルター、保存形式などの設定と、アプリ内ギャラリーに保存された写真の一覧・管理情報が端末内に保存されます。</li>
         <li><strong>購入およびトライアル状態</strong> — 21日間の無料体験およびサブスクリプション（月額／年額）または買い切り購入のため、トライアル開始日と購入状態が端末内（iOS Keychain および UserDefaults）に保存されます。実際の決済はAppleが直接処理し、本アプリが決済カード情報を受け取ることも保存することもありません。有料機能の利用権限の確認・復元にはRevenueCatを使用します — 下記「第三者サービス」をご参照ください。</li>
-    </ul>
+        <li><strong>カメラの向きの診断記録</strong> — 写真が正しい向きで保存されているかを確認するため、シャッターを押した時点の端末の傾きの値と向きの判定結果が、端末内に最大128KBまで記録されます。位置情報・写真の内容・個人を特定する情報は含まれず、端末外へ送信されることはなく、端末のバックアップにも含まれません。</li>
+</ul>
 
     <h2>権限</h2>
     <ul>
@@ -664,7 +667,7 @@
     <!-- ===== 繁體中文 ===== -->
 <section id="zh-Hant">
 <h1>隱私權政策</h1>
-<p class="meta">vismo &nbsp;·&nbsp; 最後更新：2026 年 8 月 26 日</p>
+<p class="meta">vismo &nbsp;·&nbsp; 最後更新：2026 年 8 月 30 日</p>
 
 <p>
     vismo（以下稱「本 App」）由 Hyunjin Cho（以下稱「本人」）開發與維護。
@@ -688,6 +691,7 @@
     <li><strong>Instant 濾鏡的地名與氣溫</strong> — 當您在已授予位置權限且開啟「儲存位置」的狀態下使用 Instant 濾鏡時，會另外進行兩項查詢；兩者皆由 iOS 本身執行，且僅在使用該濾鏡期間發生。第一，一個約略的位置 —— 將座標四捨五入至 0.01 度網格，約 1.1&nbsp;km —— 會傳送至 <strong>Apple 的地理編碼服務</strong>以取得簡短的地名，該地名會以手寫字體標示於 Instant 卡片的留白處；與上述圖庫查詢不同，此項要求是以本 App 的顯示語言提出，因此國外的地點也能以您自己的語言顯示。第二，一個<strong>約略</strong>的位置 —— 將座標四捨五入至 0.1 度網格，約 11 km —— 會傳送至 <strong>Apple 的 WeatherKit 服務</strong>，以取得該區域的目前氣溫。該氣溫絕不會顯示、絕不會寫入照片，也絕不會被儲存：它僅作為濾鏡色彩表現的輸入值之一，使在寒冷中拍攝的照片，呈現得比在炎熱中拍攝的照片略為冷調。兩項要求皆由 iOS 提出，受 <a href="https://www.apple.com/legal/privacy/">Apple 隱私權政策</a>規範，且絕不會傳送給本人 —— 本人並未營運伺服器。若您關閉「儲存位置」或拒絕位置權限，這兩項查詢都完全不會發生。天氣資料由 Weather 提供；Apple 提供的資料已經過修改。</li>
     <li><strong>App 設定與圖庫索引</strong> — 您的偏好設定（所選濾鏡、儲存格式等）以及已儲存照片的索引，會透過標準 iOS 儲存 API 保存於您的裝置上。</li>
     <li><strong>購買與試用狀態</strong> — 為提供 21 天免費試用與訂閱／買斷制購買，試用開始日期與購買狀態會在本機儲存於您的裝置上（使用 iOS Keychain 與 UserDefaults）。付款本身由 Apple 處理；本 App 絕不會接收或儲存您的付款卡片資訊。為驗證與回復您的購買權益，本 App 使用 RevenueCat —— 請參閱下方「第三方服務」。</li>
+    <li><strong>相機方向診斷記錄</strong> — 為確認照片是否以正確方向儲存，按下快門當下的裝置傾斜數值與方向判定結果會記錄在您的裝置上，上限 128 KB。其中不包含位置資訊、照片內容或可識別個人的資訊，不會傳送到裝置外，也不會納入裝置備份。</li>
 </ul>
 
 <h2>權限</h2>
@@ -836,7 +840,7 @@
     <!-- ===== 繁體中文（香港） ===== -->
 <section id="zh-Hant-HK">
 <h1>私隱政策</h1>
-<p class="meta">vismo &nbsp;·&nbsp; 最後更新日期：2026年8月26日</p>
+<p class="meta">vismo &nbsp;·&nbsp; 最後更新日期：2026年8月30日</p>
 
 <p>
     vismo（下稱「本應用程式」）由 Hyunjin Cho（下稱「我」）開發及維護。
@@ -860,6 +864,7 @@
     <li><strong>Instant 濾鏡的地名及氣溫</strong> — 當你在已授予位置權限並開啟「儲存位置」的情況下使用 Instant 濾鏡時，會額外進行兩項查詢；兩項均由 iOS 本身執行，且只在使用該濾鏡期間發生。第一，一個約略位置——即把座標捨入至 0.01 度網格（約 1.1&nbsp;km）後的數值——會傳送至 <strong>Apple 的地理編碼服務</strong>，以取得一個簡短地名，該地名會以手寫字體寫在 Instant 卡片的留白處；與上述相簿查詢不同，此項請求以本應用程式的顯示語言發出，因此身處外地的地名亦可以你自己的語言顯示。第二，一個<strong>約略</strong>位置——即把座標捨入至 0.1 度網格（約 11 km）後的數值——會傳送至 <strong>Apple 的 WeatherKit 服務</strong>，以取得該區域的即時氣溫。該氣溫絕不會顯示、絕不會寫入相片，亦絕不會儲存：它只用作濾鏡色彩呈現的其中一項輸入值，令在寒冷天氣下拍攝的相片，比在炎熱天氣下拍攝的略為偏冷。兩項請求均由 iOS 發出，受 <a href="https://www.apple.com/legal/privacy/">Apple 私隱政策</a>規管，並且絕不會傳送給我——我並無營運伺服器。如果你關閉「儲存位置」或拒絕授予位置權限，這兩項查詢均完全不會發生。天氣數據由 Weather 提供；Apple 所提供的數據已經過修改。</li>
     <li><strong>應用程式設定及相簿索引</strong> — 你的偏好設定（已選濾鏡、儲存格式等）及已儲存相片的索引，會透過 iOS 標準儲存 API 保存於你的裝置上。</li>
     <li><strong>購買及試用狀態</strong> — 為提供 21 天免費試用及訂閱／永久購買，試用開始日期與購買狀態會本機儲存於你的裝置上（使用 iOS 鑰匙串及 UserDefaults）。付款本身由 Apple 處理；本應用程式絕不會接收或儲存你的付款卡資料。為核實及回復你的購買權限，本應用程式使用 RevenueCat — 詳見下文「第三方服務」。</li>
+    <li><strong>相機方向診斷記錄</strong> — 為確認相片是否以正確方向儲存，按下快門當下的裝置傾斜數值與方向判定結果會記錄在你的裝置上，上限 128 KB。當中不包含位置資訊、相片內容或可識別個人的資訊，不會傳送到裝置以外，亦不會納入裝置備份。</li>
 </ul>
 
 <h2>權限</h2>
@@ -1008,7 +1013,7 @@
     <!-- ===== ไทย ===== -->
 <section id="th">
 <h1>นโยบายความเป็นส่วนตัว</h1>
-<p class="meta">vismo &nbsp;·&nbsp; อัปเดตล่าสุด: 26 สิงหาคม 2026</p>
+<p class="meta">vismo &nbsp;·&nbsp; อัปเดตล่าสุด: 30 สิงหาคม 2026</p>
 
 <p>
     vismo (ต่อไปนี้เรียกว่า "แอป") พัฒนาและดูแลโดย Hyunjin Cho (ต่อไปนี้เรียกว่า "ข้าพเจ้า")
@@ -1034,6 +1039,7 @@
     <li><strong>ชื่อสถานที่และอุณหภูมิสำหรับฟิลเตอร์ Instant</strong> — เมื่อท่านใช้ฟิลเตอร์ Instant ในขณะที่อนุญาตให้เข้าถึงตำแหน่งที่ตั้งและเปิด "บันทึกตำแหน่งที่ตั้ง" ไว้ จะมีการค้นหาเพิ่มอีกสองรายการ ซึ่งทั้งสองรายการดำเนินการโดย iOS เอง และเกิดขึ้นเฉพาะระหว่างที่ใช้ฟิลเตอร์นั้นเท่านั้น รายการแรก ตำแหน่งโดยประมาณ — คือพิกัดที่ปัดเป็นตารางกริดขนาด 0.01 องศา หรือราว 1.1&nbsp;km — จะถูกส่งไปยัง<strong>บริการแปลงพิกัดเป็นชื่อสถานที่ (geocoding) ของ Apple</strong> เพื่อรับชื่อสถานที่แบบสั้น ซึ่งจะถูกเขียนด้วยลายมือไว้ที่ขอบของการ์ด Instant ต่างจากการค้นหาในแกลเลอรีข้างต้น คำขอนี้ใช้ภาษาที่แอปแสดงผลอยู่ เพื่อให้ชื่อสถานที่ในต่างประเทศปรากฏเป็นภาษาของท่านเองได้ รายการที่สอง ตำแหน่ง<strong>โดยประมาณ</strong> — คือพิกัดที่ปัดเป็นตารางกริดขนาด 0.1 องศา หรือราว 11 km — จะถูกส่งไปยัง<strong>บริการ WeatherKit ของ Apple</strong> เพื่อรับอุณหภูมิปัจจุบันของพื้นที่นั้น อุณหภูมิที่ได้รับจะไม่ถูกแสดงบนหน้าจอ ไม่ถูกบันทึกลงในรูปภาพ และไม่ถูกจัดเก็บไว้แต่อย่างใด แต่ใช้เป็นค่านำเข้าเพียงหนึ่งค่าสำหรับการแสดงผลสีของฟิลเตอร์เท่านั้น เพื่อให้รูปที่ถ่ายในวันที่อากาศหนาวมีโทนสีเย็นกว่ารูปที่ถ่ายในวันที่อากาศร้อนเล็กน้อย คำขอทั้งสองรายการดำเนินการโดย iOS อยู่ภายใต้<a href="https://www.apple.com/legal/privacy/">นโยบายความเป็นส่วนตัวของ Apple</a> และไม่ถูกส่งมายังข้าพเจ้าเลย — ข้าพเจ้าไม่ได้ให้บริการเซิร์ฟเวอร์ หากท่านปิด "บันทึกตำแหน่งที่ตั้ง" หรือไม่อนุญาตให้เข้าถึงตำแหน่งที่ตั้ง การค้นหาทั้งสองรายการจะไม่เกิดขึ้นเลย ข้อมูลสภาพอากาศให้บริการโดย Weather ทั้งนี้ข้อมูลที่ Apple ให้มาได้รับการปรับแต่งแล้ว</li>
     <li><strong>การตั้งค่าแอปและดัชนีแกลเลอรี</strong> — การตั้งค่าที่ท่านเลือกไว้ (ฟิลเตอร์ที่เลือก รูปแบบการบันทึก ฯลฯ) และดัชนีของรูปภาพที่บันทึกไว้ จะถูกจัดเก็บไว้บนเครื่องของท่านผ่าน API การจัดเก็บมาตรฐานของ iOS</li>
     <li><strong>สถานะการซื้อและการทดลองใช้</strong> — สำหรับการทดลองใช้ฟรี 21 วัน และการสมัครสมาชิก/การซื้อแบบถาวร วันที่เริ่มทดลองใช้และสถานะการซื้อจะถูกจัดเก็บไว้เฉพาะบนเครื่องของท่าน (โดยใช้ iOS Keychain และ UserDefaults) ส่วนตัวการชำระเงินนั้น Apple เป็นผู้ดำเนินการ แอปไม่เคยได้รับหรือจัดเก็บข้อมูลบัตรชำระเงินของท่าน สำหรับการตรวจสอบและกู้คืนสิทธิ์การซื้อ แอปใช้บริการ RevenueCat — โปรดดูหัวข้อ "บริการของบุคคลที่สาม" ด้านล่าง</li>
+    <li><strong>บันทึกวินิจฉัยทิศทางของกล้อง</strong> — เพื่อตรวจสอบว่ารูปภาพถูกบันทึกในทิศทางที่ถูกต้อง ค่าการเอียงของเครื่องขณะกดชัตเตอร์และผลการตัดสินทิศทางจะถูกบันทึกไว้บนเครื่องของท่าน สูงสุด 128 KB โดยไม่มีข้อมูลตำแหน่ง เนื้อหารูปภาพ หรือข้อมูลที่ระบุตัวบุคคล ไม่มีการส่งออกนอกเครื่อง และไม่รวมอยู่ในการสำรองข้อมูลของเครื่อง</li>
 </ul>
 
 <h2>สิทธิ์การเข้าถึง</h2>
@@ -1202,7 +1208,7 @@
     <!-- ===== Bahasa Indonesia ===== -->
 <section id="id">
     <h1>Kebijakan Privasi</h1>
-    <p class="meta">vismo &nbsp;·&nbsp; Terakhir diperbarui: 26 Agustus 2026</p>
+    <p class="meta">vismo &nbsp;·&nbsp; Terakhir diperbarui: 30 Agustus 2026</p>
 
     <p>
         vismo ("Aplikasi") dikembangkan dan dikelola oleh Hyunjin Cho ("saya").
@@ -1230,7 +1236,8 @@
         <li><strong>Nama tempat dan suhu untuk filter Instant</strong> — ketika Anda menggunakan filter Instant dengan izin lokasi yang telah diberikan dan "Simpan Lokasi" dalam keadaan aktif, dua pencarian tambahan dilakukan, keduanya oleh iOS sendiri dan keduanya hanya berlangsung selama filter tersebut digunakan. Pertama, posisi perkiraan — koordinat yang dibulatkan ke kisi 0,01 derajat, kira-kira 1,1&nbsp;km — dikirimkan ke <strong>layanan geocoding Apple</strong> untuk memperoleh nama tempat yang singkat, yang dituliskan dengan gaya tulisan tangan pada tepi kartu Instant; berbeda dengan pencarian di galeri di atas, permintaan yang satu ini diajukan dalam bahasa tampilan Aplikasi, sehingga sebuah tempat di luar negeri dapat muncul dalam bahasa Anda sendiri. Kedua, posisi <strong>perkiraan</strong> — koordinat yang dibulatkan ke kisi 0,1 derajat, kira-kira 11 km — dikirimkan ke <strong>layanan WeatherKit Apple</strong> untuk memperoleh suhu terkini di area tersebut. Suhu itu tidak pernah ditampilkan, tidak pernah dituliskan ke dalam foto, dan tidak pernah disimpan: suhu hanya digunakan sebagai salah satu masukan bagi pengolahan warna filter, sehingga foto yang diambil dalam cuaca dingin ditampilkan dengan warna yang sedikit lebih dingin dibandingkan foto yang diambil dalam cuaca panas. Kedua permintaan tersebut dilakukan oleh iOS, tunduk pada <a href="https://www.apple.com/legal/privacy/">Kebijakan Privasi Apple</a>, dan tidak pernah dikirimkan kepada saya — saya tidak mengoperasikan server. Jika Anda menonaktifkan "Simpan Lokasi", atau menolak izin lokasi, kedua pencarian tersebut sama sekali tidak terjadi. Data cuaca disediakan oleh Weather; data yang disediakan oleh Apple telah dimodifikasi.</li>
         <li><strong>Pengaturan aplikasi dan indeks galeri</strong> — preferensi Anda (filter yang dipilih, format penyimpanan, dan sebagainya) serta indeks foto yang tersimpan disimpan di perangkat Anda menggunakan API penyimpanan standar iOS.</li>
         <li><strong>Status pembelian dan uji coba</strong> — untuk uji coba gratis selama 21 hari serta pembelian langganan atau seumur hidup, tanggal mulai uji coba dan status pembelian disimpan secara lokal di perangkat Anda (menggunakan iOS Keychain dan UserDefaults). Pembayaran itu sendiri ditangani oleh Apple; Aplikasi tidak pernah menerima atau menyimpan informasi kartu pembayaran Anda. Untuk memverifikasi dan memulihkan hak akses pembelian Anda, Aplikasi menggunakan RevenueCat — lihat "Layanan Pihak Ketiga" di bawah ini.</li>
-    </ul>
+        <li><strong>Catatan diagnostik orientasi kamera</strong> — untuk memastikan foto tersimpan dengan orientasi yang benar, nilai kemiringan perangkat pada saat rana ditekan beserta hasil penentuan orientasinya dicatat di perangkat Anda, maksimal 128 KB. Catatan ini tidak memuat data lokasi, isi foto, atau informasi yang mengidentifikasi Anda, tidak pernah dikirim ke luar perangkat, dan tidak disertakan dalam cadangan perangkat.</li>
+</ul>
 
     <h2>Izin</h2>
     <ul>
