@@ -3,10 +3,13 @@
 <head>
     <meta charset="utf-8">
     <!-- 2026-11-20: 앱 영어 이름이 ddak-a → ddaka 로 바뀌어 처리방침도 ../ddaka/ 로 옮겼다. 옛 주소로 들어오면 넘겨준다. -->
+    <!-- 2026-11-20 (ddaka#39 리뷰 후속): meta refresh 는 주소 뒤 #ko · #ja · #zh 언어 바로가기를 버린다 → 스크립트로 붙여서 넘긴다.
+         meta refresh 는 스크립트가 꺼진 브라우저에서만 쓰이게 noscript 안에 둔다(둘 다 켜 두면 늦게 오는 meta 쪽이 # 없이 덮어쓸 수 있다).
+         noindex 는 뺐다 — canonical("진짜 주소는 저쪽")과 엇갈리는 신호였다. -->
     <title>Privacy Policy – ddaka (moved)</title>
     <link rel="canonical" href="https://hyunjin-cho.github.io/privacy-policy/ddaka/">
-    <meta name="robots" content="noindex">
-    <meta http-equiv="refresh" content="0; url=../ddaka/">
+    <script>location.replace("../ddaka/" + location.hash);</script>
+    <noscript><meta http-equiv="refresh" content="0; url=../ddaka/"></noscript>
 </head>
 <body>
     <p>This page has moved to <a href="../ddaka/">the ddaka privacy policy</a>.</p>
